@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vLo-Z7-bWm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -31,14 +31,55 @@
                     <view key="view" contentMode="scaleToFill" id="TC1-ZY-fqV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Xjy-u7-egg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bLv-Dh-QmN">
+                                <rect key="frame" x="0.0" y="139" width="414" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Jzz-vm-LoW"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6sN-D0-G9K">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3EB-UN-Unk">
+                                <rect key="frame" x="0.0" y="184" width="414" height="712"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bvJ-Os-xAS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xjy-u7-egg" firstAttribute="trailing" secondItem="bvJ-Os-xAS" secondAttribute="trailing" id="4td-oV-Cnv"/>
+                            <constraint firstItem="3EB-UN-Unk" firstAttribute="trailing" secondItem="bvJ-Os-xAS" secondAttribute="trailing" id="B4u-V6-cVP"/>
+                            <constraint firstItem="3EB-UN-Unk" firstAttribute="leading" secondItem="bvJ-Os-xAS" secondAttribute="leading" id="Dqp-zJ-Jl3"/>
+                            <constraint firstItem="Xjy-u7-egg" firstAttribute="leading" secondItem="bvJ-Os-xAS" secondAttribute="leading" id="Knk-1S-ZAR"/>
+                            <constraint firstItem="bLv-Dh-QmN" firstAttribute="leading" secondItem="bvJ-Os-xAS" secondAttribute="leading" id="Ldw-tt-Hxa"/>
+                            <constraint firstAttribute="bottom" secondItem="3EB-UN-Unk" secondAttribute="bottom" id="RS5-HY-isE"/>
+                            <constraint firstItem="bLv-Dh-QmN" firstAttribute="top" secondItem="Xjy-u7-egg" secondAttribute="bottom" id="cvl-xm-BTl"/>
+                            <constraint firstItem="3EB-UN-Unk" firstAttribute="top" secondItem="bLv-Dh-QmN" secondAttribute="bottom" constant="5" id="oEc-rL-yyo"/>
+                            <constraint firstItem="Xjy-u7-egg" firstAttribute="top" secondItem="bvJ-Os-xAS" secondAttribute="top" id="oif-Y8-8Lf"/>
+                            <constraint firstItem="bvJ-Os-xAS" firstAttribute="trailing" secondItem="bLv-Dh-QmN" secondAttribute="trailing" id="zRg-r8-FbA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YRV-MY-Elp"/>
+                    <connections>
+                        <outlet property="filterCollectionView" destination="bLv-Dh-QmN" id="nFI-cn-R5g"/>
+                        <outlet property="productsTableView" destination="3EB-UN-Unk" id="StB-lS-JRC"/>
+                        <outlet property="searchBar" destination="Xjy-u7-egg" id="UnA-vE-mRB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZS-AA-8GY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-910" y="1208"/>
+            <point key="canvasLocation" x="-910.14492753623199" y="1207.3660714285713"/>
         </scene>
         <!--Dining View Controller-->
         <scene sceneID="dvB-K3-6ZB">

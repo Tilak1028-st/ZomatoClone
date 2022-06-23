@@ -18,6 +18,11 @@
 		82D66AE82864506E005E101B /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AE72864506E005E101B /* OffersViewController.swift */; };
 		82D66AEA2864507E005E101B /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AE92864507E005E101B /* MoneyViewController.swift */; };
 		82D66AF12864515C005E101B /* ZomatoTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AF02864515C005E101B /* ZomatoTabBarViewController.swift */; };
+		82D66AF428647D31005E101B /* DeliveryTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AF328647D31005E101B /* DeliveryTypeEnum.swift */; };
+		82D66AF8286483D4005E101B /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AF6286483D4005E101B /* FilterCollectionViewCell.swift */; };
+		82D66AF9286483D4005E101B /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66AF7286483D4005E101B /* FilterCollectionViewCell.xib */; };
+		82D66AFE28648419005E101B /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AFC28648419005E101B /* ProductTableViewCell.swift */; };
+		82D66AFF28648419005E101B /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66AFD28648419005E101B /* ProductTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		82D66AE72864506E005E101B /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
 		82D66AE92864507E005E101B /* MoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
 		82D66AF02864515C005E101B /* ZomatoTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZomatoTabBarViewController.swift; sourceTree = "<group>"; };
+		82D66AF328647D31005E101B /* DeliveryTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTypeEnum.swift; sourceTree = "<group>"; };
+		82D66AF6286483D4005E101B /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		82D66AF7286483D4005E101B /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
+		82D66AFC28648419005E101B /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		82D66AFD28648419005E101B /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,8 @@
 			children = (
 				82D66ADE28644E79005E101B /* Constant */,
 				82D66ADA28644E2B005E101B /* Delegate */,
+				82D66AF228647D0E005E101B /* Helper */,
+				82D66AF5286483A8005E101B /* Cell */,
 				82D66ADB28644E38005E101B /* ViewController */,
 				82D66ADC28644E4A005E101B /* View */,
 				82D66ADD28644E5E005E101B /* Assets */,
@@ -162,6 +174,41 @@
 			path = MoneyViewController;
 			sourceTree = "<group>";
 		};
+		82D66AF228647D0E005E101B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				82D66AF328647D31005E101B /* DeliveryTypeEnum.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		82D66AF5286483A8005E101B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				82D66AFB286483F4005E101B /* Product */,
+				82D66AFA286483DD005E101B /* FilterProduct */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		82D66AFA286483DD005E101B /* FilterProduct */ = {
+			isa = PBXGroup;
+			children = (
+				82D66AF6286483D4005E101B /* FilterCollectionViewCell.swift */,
+				82D66AF7286483D4005E101B /* FilterCollectionViewCell.xib */,
+			);
+			path = FilterProduct;
+			sourceTree = "<group>";
+		};
+		82D66AFB286483F4005E101B /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				82D66AFC28648419005E101B /* ProductTableViewCell.swift */,
+				82D66AFD28648419005E101B /* ProductTableViewCell.xib */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +269,8 @@
 			files = (
 				82D66AD328644AE2005E101B /* LaunchScreen.storyboard in Resources */,
 				82D66AD028644AE2005E101B /* Assets.xcassets in Resources */,
+				82D66AFF28648419005E101B /* ProductTableViewCell.xib in Resources */,
+				82D66AF9286483D4005E101B /* FilterCollectionViewCell.xib in Resources */,
 				82D66ACE28644ADF005E101B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,11 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D66AF8286483D4005E101B /* FilterCollectionViewCell.swift in Sources */,
 				82D66AE028644E9D005E101B /* StringConstant.swift in Sources */,
+				82D66AF428647D31005E101B /* DeliveryTypeEnum.swift in Sources */,
 				82D66AE428645051005E101B /* DeliveryViewController.swift in Sources */,
 				82D66AEA2864507E005E101B /* MoneyViewController.swift in Sources */,
 				82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */,
 				82D66AC928644ADF005E101B /* SceneDelegate.swift in Sources */,
+				82D66AFE28648419005E101B /* ProductTableViewCell.swift in Sources */,
 				82D66AE82864506E005E101B /* OffersViewController.swift in Sources */,
 				82D66AE628645060005E101B /* DiningViewController.swift in Sources */,
 				82D66AF12864515C005E101B /* ZomatoTabBarViewController.swift in Sources */,
