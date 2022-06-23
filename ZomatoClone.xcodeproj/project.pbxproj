@@ -13,6 +13,7 @@
 		82D66ACE28644ADF005E101B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D66ACC28644ADF005E101B /* Main.storyboard */; };
 		82D66AD028644AE2005E101B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D66ACF28644AE2005E101B /* Assets.xcassets */; };
 		82D66AD328644AE2005E101B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D66AD128644AE2005E101B /* LaunchScreen.storyboard */; };
+		82D66AE028644E9D005E101B /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66ADF28644E9D005E101B /* StringConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		82D66ACF28644AE2005E101B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82D66AD228644AE2005E101B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82D66AD428644AE2005E101B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82D66ADF28644E9D005E101B /* StringConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		82D66AC528644ADF005E101B /* ZomatoClone */ = {
 			isa = PBXGroup;
 			children = (
-				82D66AC628644ADF005E101B /* AppDelegate.swift */,
-				82D66AC828644ADF005E101B /* SceneDelegate.swift */,
-				82D66ACA28644ADF005E101B /* ViewController.swift */,
-				82D66ACC28644ADF005E101B /* Main.storyboard */,
-				82D66ACF28644AE2005E101B /* Assets.xcassets */,
-				82D66AD128644AE2005E101B /* LaunchScreen.storyboard */,
+				82D66ADE28644E79005E101B /* Constant */,
+				82D66ADA28644E2B005E101B /* Delegate */,
+				82D66ADB28644E38005E101B /* ViewController */,
+				82D66ADC28644E4A005E101B /* View */,
+				82D66ADD28644E5E005E101B /* Assets */,
 				82D66AD428644AE2005E101B /* Info.plist */,
 			);
 			path = ZomatoClone;
+			sourceTree = "<group>";
+		};
+		82D66ADA28644E2B005E101B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				82D66AC628644ADF005E101B /* AppDelegate.swift */,
+				82D66AC828644ADF005E101B /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		82D66ADB28644E38005E101B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82D66ACA28644ADF005E101B /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		82D66ADC28644E4A005E101B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82D66ACC28644ADF005E101B /* Main.storyboard */,
+				82D66AD128644AE2005E101B /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82D66ADD28644E5E005E101B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				82D66ACF28644AE2005E101B /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		82D66ADE28644E79005E101B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				82D66ADF28644E9D005E101B /* StringConstant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D66AE028644E9D005E101B /* StringConstant.swift in Sources */,
 				82D66ACB28644ADF005E101B /* ViewController.swift in Sources */,
 				82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */,
 				82D66AC928644ADF005E101B /* SceneDelegate.swift in Sources */,
