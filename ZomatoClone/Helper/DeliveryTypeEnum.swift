@@ -8,8 +8,8 @@
 import Foundation
 import CoreText
 
-enum DeliverySection: String, CaseIterable {
-  
+enum DeliverySection: String, CaseIterable
+{
     case bannerCell = ""
     case topBrandCell = "Top Brands for you"
     case quickCheckoutCell = "Quick checkout munchies"
@@ -24,4 +24,16 @@ enum DeliverySection: String, CaseIterable {
     case eveningSweetCell = "Some evening sweets"
     case desertCell = "Amazing desserts"
     case restaurantsCell = "100 restaurants around you"
+}
+
+enum filterRow: String, CaseIterable
+{
+    case sort = "Sort"
+    case pureveg = "Pure Veg"
+    case fastdelivery = "Fast Delivery"
+    case rating = "Rating 4.0+"
+    case arrivals = "New Arrivals"
+    case cuisines = "Cuisines"
+    case maxSafety = "MAX Safety"
+    case more = "More"
 }

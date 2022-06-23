@@ -36,23 +36,31 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bLv-Dh-QmN">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bLv-Dh-QmN">
                                 <rect key="frame" x="0.0" y="139" width="414" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Jzz-vm-LoW"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6sN-D0-G9K">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="6sN-D0-G9K">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="upc-14-Tfx" id="1ms-8X-NXW"/>
+                                    <outlet property="delegate" destination="upc-14-Tfx" id="wD5-BH-ni9"/>
+                                </connections>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3EB-UN-Unk">
-                                <rect key="frame" x="0.0" y="184" width="414" height="712"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3EB-UN-Unk">
+                                <rect key="frame" x="0.0" y="184" width="414" height="629"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="upc-14-Tfx" id="YCE-MQ-SEl"/>
+                                    <outlet property="delegate" destination="upc-14-Tfx" id="5GL-SD-1JP"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bvJ-Os-xAS"/>
@@ -63,7 +71,7 @@
                             <constraint firstItem="3EB-UN-Unk" firstAttribute="leading" secondItem="bvJ-Os-xAS" secondAttribute="leading" id="Dqp-zJ-Jl3"/>
                             <constraint firstItem="Xjy-u7-egg" firstAttribute="leading" secondItem="bvJ-Os-xAS" secondAttribute="leading" id="Knk-1S-ZAR"/>
                             <constraint firstItem="bLv-Dh-QmN" firstAttribute="leading" secondItem="bvJ-Os-xAS" secondAttribute="leading" id="Ldw-tt-Hxa"/>
-                            <constraint firstAttribute="bottom" secondItem="3EB-UN-Unk" secondAttribute="bottom" id="RS5-HY-isE"/>
+                            <constraint firstItem="3EB-UN-Unk" firstAttribute="bottom" secondItem="bvJ-Os-xAS" secondAttribute="bottom" id="Zjm-E1-PYE"/>
                             <constraint firstItem="bLv-Dh-QmN" firstAttribute="top" secondItem="Xjy-u7-egg" secondAttribute="bottom" id="cvl-xm-BTl"/>
                             <constraint firstItem="3EB-UN-Unk" firstAttribute="top" secondItem="bLv-Dh-QmN" secondAttribute="bottom" constant="5" id="oEc-rL-yyo"/>
                             <constraint firstItem="Xjy-u7-egg" firstAttribute="top" secondItem="bvJ-Os-xAS" secondAttribute="top" id="oif-Y8-8Lf"/>
@@ -129,11 +137,13 @@
             </objects>
             <point key="canvasLocation" x="1003" y="1211"/>
         </scene>
-        <!--Item-->
+        <!--Delivery-->
         <scene sceneID="UC7-dc-6sM">
             <objects>
                 <navigationController id="jhy-7H-MEf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4a1-m6-zAn"/>
+                    <tabBarItem key="tabBarItem" title="Delivery" image="scooter" catalog="system" selectedImage="scooter" id="4a1-m6-zAn">
+                        <color key="badgeColor" systemColor="systemPinkColor"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CH7-gS-GrY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -146,11 +156,13 @@
             </objects>
             <point key="canvasLocation" x="-909" y="528"/>
         </scene>
-        <!--Item-->
+        <!--Dining-->
         <scene sceneID="ih5-6J-jtV">
             <objects>
                 <navigationController id="nIH-2i-uiR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="r6Y-uG-LwJ"/>
+                    <tabBarItem key="tabBarItem" title="Dining" image="lifepreserver" catalog="system" id="r6Y-uG-LwJ">
+                        <color key="badgeColor" systemColor="systemPinkColor"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="snx-OF-XdC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -163,11 +175,13 @@
             </objects>
             <point key="canvasLocation" x="-283" y="528"/>
         </scene>
-        <!--Item-->
+        <!--Offers-->
         <scene sceneID="adv-05-vGh">
             <objects>
                 <navigationController id="MXa-Z3-U8Y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="IDe-wI-Xmh"/>
+                    <tabBarItem key="tabBarItem" title="Offers" image="command" catalog="system" id="IDe-wI-Xmh">
+                        <color key="badgeColor" systemColor="systemPinkColor"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0JA-fR-Tjg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -189,6 +203,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="tintColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="jhy-7H-MEf" kind="relationship" relationship="viewControllers" id="efO-wB-Jmf"/>
@@ -201,11 +217,13 @@
             </objects>
             <point key="canvasLocation" x="132" y="-200"/>
         </scene>
-        <!--Item-->
+        <!--Money-->
         <scene sceneID="ZSD-wT-umY">
             <objects>
                 <navigationController id="pxQ-VE-Ear" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Gg3-gO-Ubl"/>
+                    <tabBarItem key="tabBarItem" title="Money" image="wallet.pass" catalog="system" id="Gg3-gO-Ubl">
+                        <color key="badgeColor" systemColor="systemPinkColor"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vPS-r3-S8H">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -220,8 +238,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="command" catalog="system" width="128" height="115"/>
+        <image name="lifepreserver" catalog="system" width="128" height="121"/>
+        <image name="scooter" catalog="system" width="128" height="95"/>
+        <image name="wallet.pass" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

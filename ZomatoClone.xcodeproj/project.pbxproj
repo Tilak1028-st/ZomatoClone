@@ -23,6 +23,12 @@
 		82D66AF9286483D4005E101B /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66AF7286483D4005E101B /* FilterCollectionViewCell.xib */; };
 		82D66AFE28648419005E101B /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AFC28648419005E101B /* ProductTableViewCell.swift */; };
 		82D66AFF28648419005E101B /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66AFD28648419005E101B /* ProductTableViewCell.xib */; };
+		82D66B0228648EC3005E101B /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66B0028648EC3005E101B /* BannerTableViewCell.swift */; };
+		82D66B0328648EC3005E101B /* BannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66B0128648EC3005E101B /* BannerTableViewCell.xib */; };
+		82D66B0728648EF1005E101B /* TopBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66B0528648EF1005E101B /* TopBrandTableViewCell.swift */; };
+		82D66B0828648EF1005E101B /* TopBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66B0628648EF1005E101B /* TopBrandTableViewCell.xib */; };
+		82D66B0C28648F1A005E101B /* QuickCheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66B0A28648F1A005E101B /* QuickCheckoutTableViewCell.swift */; };
+		82D66B0D28648F1A005E101B /* QuickCheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66B0B28648F1A005E101B /* QuickCheckoutTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,12 @@
 		82D66AF7286483D4005E101B /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		82D66AFC28648419005E101B /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		82D66AFD28648419005E101B /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		82D66B0028648EC3005E101B /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
+		82D66B0128648EC3005E101B /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerTableViewCell.xib; sourceTree = "<group>"; };
+		82D66B0528648EF1005E101B /* TopBrandTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBrandTableViewCell.swift; sourceTree = "<group>"; };
+		82D66B0628648EF1005E101B /* TopBrandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopBrandTableViewCell.xib; sourceTree = "<group>"; };
+		82D66B0A28648F1A005E101B /* QuickCheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCheckoutTableViewCell.swift; sourceTree = "<group>"; };
+		82D66B0B28648F1A005E101B /* QuickCheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuickCheckoutTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +199,9 @@
 			children = (
 				82D66AFB286483F4005E101B /* Product */,
 				82D66AFA286483DD005E101B /* FilterProduct */,
+				82D66B0428648ED5005E101B /* Banner */,
+				82D66B0928648EF6005E101B /* TopBrand */,
+				82D66B0E28648F28005E101B /* QuickCheckout */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -207,6 +222,33 @@
 				82D66AFD28648419005E101B /* ProductTableViewCell.xib */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		82D66B0428648ED5005E101B /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				82D66B0028648EC3005E101B /* BannerTableViewCell.swift */,
+				82D66B0128648EC3005E101B /* BannerTableViewCell.xib */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		82D66B0928648EF6005E101B /* TopBrand */ = {
+			isa = PBXGroup;
+			children = (
+				82D66B0528648EF1005E101B /* TopBrandTableViewCell.swift */,
+				82D66B0628648EF1005E101B /* TopBrandTableViewCell.xib */,
+			);
+			path = TopBrand;
+			sourceTree = "<group>";
+		};
+		82D66B0E28648F28005E101B /* QuickCheckout */ = {
+			isa = PBXGroup;
+			children = (
+				82D66B0A28648F1A005E101B /* QuickCheckoutTableViewCell.swift */,
+				82D66B0B28648F1A005E101B /* QuickCheckoutTableViewCell.xib */,
+			);
+			path = QuickCheckout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				82D66AD328644AE2005E101B /* LaunchScreen.storyboard in Resources */,
+				82D66B0828648EF1005E101B /* TopBrandTableViewCell.xib in Resources */,
 				82D66AD028644AE2005E101B /* Assets.xcassets in Resources */,
 				82D66AFF28648419005E101B /* ProductTableViewCell.xib in Resources */,
 				82D66AF9286483D4005E101B /* FilterCollectionViewCell.xib in Resources */,
+				82D66B0D28648F1A005E101B /* QuickCheckoutTableViewCell.xib in Resources */,
 				82D66ACE28644ADF005E101B /* Main.storyboard in Resources */,
+				82D66B0328648EC3005E101B /* BannerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +332,13 @@
 				82D66AF428647D31005E101B /* DeliveryTypeEnum.swift in Sources */,
 				82D66AE428645051005E101B /* DeliveryViewController.swift in Sources */,
 				82D66AEA2864507E005E101B /* MoneyViewController.swift in Sources */,
+				82D66B0728648EF1005E101B /* TopBrandTableViewCell.swift in Sources */,
 				82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */,
 				82D66AC928644ADF005E101B /* SceneDelegate.swift in Sources */,
+				82D66B0C28648F1A005E101B /* QuickCheckoutTableViewCell.swift in Sources */,
 				82D66AFE28648419005E101B /* ProductTableViewCell.swift in Sources */,
 				82D66AE82864506E005E101B /* OffersViewController.swift in Sources */,
+				82D66B0228648EC3005E101B /* BannerTableViewCell.swift in Sources */,
 				82D66AE628645060005E101B /* DiningViewController.swift in Sources */,
 				82D66AF12864515C005E101B /* ZomatoTabBarViewController.swift in Sources */,
 			);

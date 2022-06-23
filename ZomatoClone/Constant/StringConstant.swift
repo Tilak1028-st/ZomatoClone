@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
-class StringConstant {
+class StringConstant
+{
+    static var filterCell = "FilterCollectionViewCell"
+    static var productCell = "ProductTableViewCell"
+    static var bannerCell = "BannerTableViewCell"
     
 }
