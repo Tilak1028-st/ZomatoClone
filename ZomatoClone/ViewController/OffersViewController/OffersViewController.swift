@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OffersViewController.swift
 //  ZomatoClone
 //
 //  Created by PCS213 on 23/06/22.
@@ -7,11 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OffersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 }
-

@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AC628644ADF005E101B /* AppDelegate.swift */; };
 		82D66AC928644ADF005E101B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AC828644ADF005E101B /* SceneDelegate.swift */; };
-		82D66ACB28644ADF005E101B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66ACA28644ADF005E101B /* ViewController.swift */; };
 		82D66ACE28644ADF005E101B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D66ACC28644ADF005E101B /* Main.storyboard */; };
 		82D66AD028644AE2005E101B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D66ACF28644AE2005E101B /* Assets.xcassets */; };
 		82D66AD328644AE2005E101B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D66AD128644AE2005E101B /* LaunchScreen.storyboard */; };
 		82D66AE028644E9D005E101B /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66ADF28644E9D005E101B /* StringConstant.swift */; };
+		82D66AE428645051005E101B /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AE328645051005E101B /* DeliveryViewController.swift */; };
+		82D66AE628645060005E101B /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AE528645060005E101B /* DiningViewController.swift */; };
+		82D66AE82864506E005E101B /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AE72864506E005E101B /* OffersViewController.swift */; };
+		82D66AEA2864507E005E101B /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AE92864507E005E101B /* MoneyViewController.swift */; };
+		82D66AF12864515C005E101B /* ZomatoTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AF02864515C005E101B /* ZomatoTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		82D66AC328644ADF005E101B /* ZomatoClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZomatoClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D66AC628644ADF005E101B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D66AC828644ADF005E101B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		82D66ACA28644ADF005E101B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82D66ACD28644ADF005E101B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82D66ACF28644AE2005E101B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82D66AD228644AE2005E101B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82D66AD428644AE2005E101B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82D66ADF28644E9D005E101B /* StringConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
+		82D66AE328645051005E101B /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
+		82D66AE528645060005E101B /* DiningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningViewController.swift; sourceTree = "<group>"; };
+		82D66AE72864506E005E101B /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
+		82D66AE92864507E005E101B /* MoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
+		82D66AF02864515C005E101B /* ZomatoTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZomatoTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +88,11 @@
 		82D66ADB28644E38005E101B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				82D66ACA28644ADF005E101B /* ViewController.swift */,
+				82D66AEB286450AB005E101B /* ZomatoTabViewController */,
+				82D66AEC286450B8005E101B /* DeliveryViewController */,
+				82D66AED286450C2005E101B /* DiningViewController */,
+				82D66AEE286450CA005E101B /* OffersViewController */,
+				82D66AEF286450D3005E101B /* MoneyViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -108,6 +120,46 @@
 				82D66ADF28644E9D005E101B /* StringConstant.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		82D66AEB286450AB005E101B /* ZomatoTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82D66AF02864515C005E101B /* ZomatoTabBarViewController.swift */,
+			);
+			path = ZomatoTabViewController;
+			sourceTree = "<group>";
+		};
+		82D66AEC286450B8005E101B /* DeliveryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82D66AE328645051005E101B /* DeliveryViewController.swift */,
+			);
+			path = DeliveryViewController;
+			sourceTree = "<group>";
+		};
+		82D66AED286450C2005E101B /* DiningViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82D66AE528645060005E101B /* DiningViewController.swift */,
+			);
+			path = DiningViewController;
+			sourceTree = "<group>";
+		};
+		82D66AEE286450CA005E101B /* OffersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82D66AE72864506E005E101B /* OffersViewController.swift */,
+			);
+			path = OffersViewController;
+			sourceTree = "<group>";
+		};
+		82D66AEF286450D3005E101B /* MoneyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82D66AE92864507E005E101B /* MoneyViewController.swift */,
+			);
+			path = MoneyViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +234,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				82D66AE028644E9D005E101B /* StringConstant.swift in Sources */,
-				82D66ACB28644ADF005E101B /* ViewController.swift in Sources */,
+				82D66AE428645051005E101B /* DeliveryViewController.swift in Sources */,
+				82D66AEA2864507E005E101B /* MoneyViewController.swift in Sources */,
 				82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */,
 				82D66AC928644ADF005E101B /* SceneDelegate.swift in Sources */,
+				82D66AE82864506E005E101B /* OffersViewController.swift in Sources */,
+				82D66AE628645060005E101B /* DiningViewController.swift in Sources */,
+				82D66AF12864515C005E101B /* ZomatoTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
