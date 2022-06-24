@@ -22,6 +22,7 @@ class SmallProductTableViewCell: UITableViewCell {
     
 }
 
+//MARK: - SmallProduct CollectionView Delegate and datasource methods.
 
 extension SmallProductTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource
 {
@@ -48,6 +49,8 @@ extension SmallProductTableViewCell: UICollectionViewDelegate, UICollectionViewD
         return item
     }
 }
+
+//MARK: - SmallProduct CollectionView FlowLayout methods.
 
 extension SmallProductTableViewCell: UICollectionViewDelegateFlowLayout
 {
