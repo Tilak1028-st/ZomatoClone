@@ -103,7 +103,7 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
         case .quickCheckoutCell:
             return 300
         case .eatHappyCell:
-            return 200
+            return 250
         case .recommendedCell:
             return 200
         case .featureDCell:
@@ -111,7 +111,7 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
         case .amazingSnacksCell:
             return 200
         case .againBannerCell:
-            return 300
+            return 250
         case .deliciousCell:
             return 200
         case .eveningCell:
@@ -152,7 +152,7 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.quickCheckoutTableCell, for: indexPath) as! QuickCheckoutTableViewCell
             return cell
         case .eatHappyCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
             return cell
         case .recommendedCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
