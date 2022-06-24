@@ -12,10 +12,13 @@ class QuickCheckoutItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        self.cellView.layer.borderWidth = 1
-        self.cellView.layer.borderColor = UIColor.gray.cgColor
-        self.cellView.layer.cornerRadius = 10
+//        cellView.layer.borderWidth = 0.5
+//        cellView.layer.borderColor = UIColor.gray.cgColor
+//        cellView.layer.cornerRadius = 5
+//        cellView.layer.shadowRadius = 5
+//        cellView.layer.shadowColor = UIColor.gray.cgColor
+//        cellView.layer.shadowOpacity = 0.7
+//        cellView.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
 
 }

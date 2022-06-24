@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-sO-gxk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
+                        <rect key="frame" x="10" y="0.0" width="300" height="186"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="TOe-U4-or5">
                             <size key="itemSize" width="128" height="128"/>
@@ -33,10 +33,10 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="mX8-sO-gxk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NeG-qF-jvb"/>
+                    <constraint firstItem="mX8-sO-gxk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="NeG-qF-jvb"/>
                     <constraint firstItem="mX8-sO-gxk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ech-qt-0rf"/>
                     <constraint firstAttribute="bottom" secondItem="mX8-sO-gxk" secondAttribute="bottom" id="ez5-5f-8nf"/>
-                    <constraint firstAttribute="trailing" secondItem="mX8-sO-gxk" secondAttribute="trailing" id="ydX-x8-m1J"/>
+                    <constraint firstAttribute="trailing" secondItem="mX8-sO-gxk" secondAttribute="trailing" constant="10" id="ydX-x8-m1J"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
