@@ -27,6 +27,7 @@ class DeliveryViewController: UIViewController {
         productsTableView.register(UINib(nibName: StringConstant.bannerCell, bundle: nil), forCellReuseIdentifier: StringConstant.bannerCell)
         productsTableView.register(UINib(nibName: StringConstant.topBrandTableCell, bundle: nil), forCellReuseIdentifier: StringConstant.topBrandTableCell)
         productsTableView.register(UINib(nibName: StringConstant.quickCheckoutTableCell, bundle: nil), forCellReuseIdentifier: StringConstant.quickCheckoutTableCell)
+        productsTableView.register(UINib(nibName: StringConstant.smallProductTableCell, bundle: nil), forCellReuseIdentifier: StringConstant.smallProductTableCell)
         productsTableView.separatorColor = UIColor.clear
     }
     
@@ -105,23 +106,23 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
         case .eatHappyCell:
             return 250
         case .recommendedCell:
-            return 200
+            return 250
         case .featureDCell:
-            return 200
+            return 250
         case .amazingSnacksCell:
-            return 200
+            return 250
         case .againBannerCell:
             return 250
         case .deliciousCell:
-            return 200
+            return 250
         case .eveningCell:
-            return 200
+            return 250
         case .deliciousBurgersCell:
-            return 200
+            return 250
         case .eveningSweetCell:
-            return 200
+            return 250
         case .desertCell:
-            return 200
+            return 250
         case .restaurantsCell:
             return 200
         }
@@ -155,31 +156,31 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
             return cell
         case .recommendedCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
             return cell
         case .featureDCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
             return cell
         case .amazingSnacksCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
             return cell
         case .againBannerCell:
             let bannerCell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.bannerCell, for: indexPath) as! BannerTableViewCell
             return bannerCell
         case .deliciousCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
             return cell
         case .eveningCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
             return cell
         case .deliciousBurgersCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
             return cell
         case .eveningSweetCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
             return cell
         case .desertCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
             return cell
         case .restaurantsCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell

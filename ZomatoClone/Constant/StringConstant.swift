@@ -18,4 +18,6 @@ class StringConstant
     static var brandItemCollectionCell = "BrandItemCollectionViewCell"
     static var quickCheckoutTableCell = "QuickCheckoutTableViewCell"
     static var quickCheckoutCollectViewCell = "QuickCheckoutItemCollectionViewCell"
+    static var smallProductTableCell = "SmallProductTableViewCell"
+    static var smallProductCollectionViewCell = "SmallProductCollectionViewCell"
 }
