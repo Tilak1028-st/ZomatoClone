@@ -22,6 +22,8 @@ class QuickCheckoutTableViewCell: UITableViewCell {
     
 }
 
+//MARK: - QuickCheckoutTableViewCell's CollectionView Delegate and Datasource methods.
+
 extension QuickCheckoutTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         1
@@ -43,6 +45,8 @@ extension QuickCheckoutTableViewCell: UICollectionViewDelegate, UICollectionView
         return item
     }
 }
+
+//MARK: - QuickCheckoutTableViewCell's CollectionView FlowLayout methods.
 
 extension QuickCheckoutTableViewCell: UICollectionViewDelegateFlowLayout {
     

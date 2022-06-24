@@ -21,6 +21,7 @@ class ProductTableViewCell: UITableViewCell {
     }
 }
 
+//MARK: - ProductTableView's CollectionView Delegate and Datasource methods.
 
 extension ProductTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource
 {
@@ -40,6 +41,8 @@ extension ProductTableViewCell: UICollectionViewDelegate, UICollectionViewDataSo
         return item
     }
 }
+
+//MARK: - ProductTableView's CollectionView FlowLayout methods.
 
 extension ProductTableViewCell: UICollectionViewDelegateFlowLayout
 {

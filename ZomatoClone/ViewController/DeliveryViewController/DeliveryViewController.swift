@@ -18,7 +18,7 @@ class DeliveryViewController: UIViewController {
         setUpview()
     }
     
-    //MARK:  - SetUpView
+//MARK:  - SetUpView
     
     private func setUpview()
     {
@@ -103,6 +103,7 @@ class DeliveryViewController: UIViewController {
     }
 }
 
+//MARK: - Filter CollectionView Delegate and Datasource methods.
 
 extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
@@ -139,6 +140,7 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
     
 }
 
+//MARK: - Product tableview delegate and datasource methods.
 
 extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
 {

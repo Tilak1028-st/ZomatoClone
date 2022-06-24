@@ -23,6 +23,8 @@ class TopBrandTableViewCell: UITableViewCell {
     
 }
 
+//MARK:  - TopBrandtableView's CollectionView Delegate and Datasource methods.
+
 extension TopBrandTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource
 {
     func numberOfSections(in collectionView: UICollectionView) -> Int
@@ -71,13 +73,14 @@ extension TopBrandTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
     }
 }
 
+//MARK:  - TopBrandtableView's CollectionView FlowLayout methods.
+
 extension TopBrandTableViewCell: UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         let collectionWidth = collectionView.bounds.width
         let collectionHeight = collectionView.bounds.height
-        print("width \(collectionWidth/4-3.5) height \(collectionHeight/2)")
         return CGSize(width: collectionWidth/4.3-2, height: collectionHeight/2)
     }
     
@@ -92,6 +95,8 @@ extension TopBrandTableViewCell: UICollectionViewDelegateFlowLayout
         return 0
     }
 }
+
+//MARK: Enum for brandname.
 
 enum brandName: String, CaseIterable
 {
