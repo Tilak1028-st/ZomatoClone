@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreText
+import UIKit
 
 enum DeliverySection: String, CaseIterable
 {
@@ -23,7 +24,7 @@ enum DeliverySection: String, CaseIterable
     case deliciousBurgersCell = "Delicious burgers"
     case eveningSweetCell = "Some evening sweets"
     case desertCell = "Amazing desserts"
-    case restaurantsCell = "100 restaurants around you"
+    case restaurantsCell = "100+ restaurants around you"
 }
 
 enum filterRow: String, CaseIterable
@@ -37,3 +38,5 @@ enum filterRow: String, CaseIterable
     case maxSafety = "MAX Safety"
     case more = "More"
 }
+
+

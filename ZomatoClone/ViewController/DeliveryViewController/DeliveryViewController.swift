@@ -25,13 +25,15 @@ class DeliveryViewController: UIViewController {
         filterCollectionView.register(UINib.init(nibName: StringConstant.filterCell, bundle: nil), forCellWithReuseIdentifier: StringConstant.filterCell)
         productsTableView.register(UINib(nibName: StringConstant.productCell, bundle: nil), forCellReuseIdentifier: StringConstant.productCell)
         productsTableView.register(UINib(nibName: StringConstant.bannerCell, bundle: nil), forCellReuseIdentifier: StringConstant.bannerCell)
+        productsTableView.register(UINib(nibName: StringConstant.topBrandTableCell, bundle: nil), forCellReuseIdentifier: StringConstant.topBrandTableCell)
+        productsTableView.register(UINib(nibName: StringConstant.quickCheckoutTableCell, bundle: nil), forCellReuseIdentifier: StringConstant.quickCheckoutTableCell)
         productsTableView.separatorColor = UIColor.clear
     }
     
 }
 
 
-extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewDataSource
+extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         1
@@ -65,14 +67,66 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
         return item
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        30
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let collectionWidth = collectionView.bounds.width
+        let collectionHeight = collectionView.bounds.height
+        print("width \(collectionWidth/4-3.5) height \(collectionHeight/2)")
+        return CGSize(width: collectionWidth, height: collectionHeight)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 0
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 0
+    }
+    
 }
 
 
 extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
 {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let section = DeliverySection.allCases[indexPath.section]
+        
+        switch section {
+            
+        case .bannerCell:
+            return 250
+        case .topBrandCell:
+            return 250
+        case .quickCheckoutCell:
+            return 300
+        case .eatHappyCell:
+            return 200
+        case .recommendedCell:
+            return 200
+        case .featureDCell:
+            return 200
+        case .amazingSnacksCell:
+            return 200
+        case .againBannerCell:
+            return 300
+        case .deliciousCell:
+            return 200
+        case .eveningCell:
+            return 200
+        case .deliciousBurgersCell:
+            return 200
+        case .eveningSweetCell:
+            return 200
+        case .desertCell:
+            return 200
+        case .restaurantsCell:
+            return 200
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return DeliverySection.allCases.count
     }
@@ -92,10 +146,10 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
             return bannerCell
             
         case .topBrandCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
             return cell
         case .quickCheckoutCell:
-            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.quickCheckoutTableCell, for: indexPath) as! QuickCheckoutTableViewCell
             return cell
         case .eatHappyCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.productCell, for: indexPath) as! ProductTableViewCell

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82983BF028656DEB00AD71C7 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82983BEE28656DEB00AD71C7 /* ProductCollectionViewCell.swift */; };
+		82983BF128656DEB00AD71C7 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82983BEF28656DEB00AD71C7 /* ProductCollectionViewCell.xib */; };
+		82983BF52865775A00AD71C7 /* BrandItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82983BF32865775A00AD71C7 /* BrandItemCollectionViewCell.swift */; };
+		82983BF62865775A00AD71C7 /* BrandItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82983BF42865775A00AD71C7 /* BrandItemCollectionViewCell.xib */; };
+		82983BFA28659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82983BF828659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.swift */; };
+		82983BFB28659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82983BF928659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.xib */; };
 		82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AC628644ADF005E101B /* AppDelegate.swift */; };
 		82D66AC928644ADF005E101B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AC828644ADF005E101B /* SceneDelegate.swift */; };
 		82D66ACE28644ADF005E101B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D66ACC28644ADF005E101B /* Main.storyboard */; };
@@ -32,6 +38,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82983BEE28656DEB00AD71C7 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		82983BEF28656DEB00AD71C7 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		82983BF32865775A00AD71C7 /* BrandItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		82983BF42865775A00AD71C7 /* BrandItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		82983BF828659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCheckoutItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		82983BF928659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuickCheckoutItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		82D66AC328644ADF005E101B /* ZomatoClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZomatoClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D66AC628644ADF005E101B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D66AC828644ADF005E101B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +81,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82983BF228656DF500AD71C7 /* ProductCollection */ = {
+			isa = PBXGroup;
+			children = (
+				82983BEE28656DEB00AD71C7 /* ProductCollectionViewCell.swift */,
+				82983BEF28656DEB00AD71C7 /* ProductCollectionViewCell.xib */,
+			);
+			path = ProductCollection;
+			sourceTree = "<group>";
+		};
+		82983BF72865776200AD71C7 /* BrandItem */ = {
+			isa = PBXGroup;
+			children = (
+				82983BF32865775A00AD71C7 /* BrandItemCollectionViewCell.swift */,
+				82983BF42865775A00AD71C7 /* BrandItemCollectionViewCell.xib */,
+			);
+			path = BrandItem;
+			sourceTree = "<group>";
+		};
+		82983BFC28659B7300AD71C7 /* QuickCheckoutItem */ = {
+			isa = PBXGroup;
+			children = (
+				82983BF828659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.swift */,
+				82983BF928659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.xib */,
+			);
+			path = QuickCheckoutItem;
+			sourceTree = "<group>";
+		};
 		82D66ABA28644ADF005E101B = {
 			isa = PBXGroup;
 			children = (
@@ -88,8 +127,8 @@
 		82D66AC528644ADF005E101B /* ZomatoClone */ = {
 			isa = PBXGroup;
 			children = (
-				82D66ADE28644E79005E101B /* Constant */,
 				82D66ADA28644E2B005E101B /* Delegate */,
+				82D66ADE28644E79005E101B /* Constant */,
 				82D66AF228647D0E005E101B /* Helper */,
 				82D66AF5286483A8005E101B /* Cell */,
 				82D66ADB28644E38005E101B /* ViewController */,
@@ -220,6 +259,7 @@
 			children = (
 				82D66AFC28648419005E101B /* ProductTableViewCell.swift */,
 				82D66AFD28648419005E101B /* ProductTableViewCell.xib */,
+				82983BF228656DF500AD71C7 /* ProductCollection */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -238,6 +278,7 @@
 			children = (
 				82D66B0528648EF1005E101B /* TopBrandTableViewCell.swift */,
 				82D66B0628648EF1005E101B /* TopBrandTableViewCell.xib */,
+				82983BF72865776200AD71C7 /* BrandItem */,
 			);
 			path = TopBrand;
 			sourceTree = "<group>";
@@ -247,6 +288,7 @@
 			children = (
 				82D66B0A28648F1A005E101B /* QuickCheckoutTableViewCell.swift */,
 				82D66B0B28648F1A005E101B /* QuickCheckoutTableViewCell.xib */,
+				82983BFC28659B7300AD71C7 /* QuickCheckoutItem */,
 			);
 			path = QuickCheckout;
 			sourceTree = "<group>";
@@ -311,10 +353,13 @@
 			files = (
 				82D66AD328644AE2005E101B /* LaunchScreen.storyboard in Resources */,
 				82D66B0828648EF1005E101B /* TopBrandTableViewCell.xib in Resources */,
+				82983BF128656DEB00AD71C7 /* ProductCollectionViewCell.xib in Resources */,
+				82983BF62865775A00AD71C7 /* BrandItemCollectionViewCell.xib in Resources */,
 				82D66AD028644AE2005E101B /* Assets.xcassets in Resources */,
 				82D66AFF28648419005E101B /* ProductTableViewCell.xib in Resources */,
 				82D66AF9286483D4005E101B /* FilterCollectionViewCell.xib in Resources */,
 				82D66B0D28648F1A005E101B /* QuickCheckoutTableViewCell.xib in Resources */,
+				82983BFB28659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.xib in Resources */,
 				82D66ACE28644ADF005E101B /* Main.storyboard in Resources */,
 				82D66B0328648EC3005E101B /* BannerTableViewCell.xib in Resources */,
 			);
@@ -334,12 +379,15 @@
 				82D66AEA2864507E005E101B /* MoneyViewController.swift in Sources */,
 				82D66B0728648EF1005E101B /* TopBrandTableViewCell.swift in Sources */,
 				82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */,
+				82983BF028656DEB00AD71C7 /* ProductCollectionViewCell.swift in Sources */,
 				82D66AC928644ADF005E101B /* SceneDelegate.swift in Sources */,
 				82D66B0C28648F1A005E101B /* QuickCheckoutTableViewCell.swift in Sources */,
 				82D66AFE28648419005E101B /* ProductTableViewCell.swift in Sources */,
+				82983BF52865775A00AD71C7 /* BrandItemCollectionViewCell.swift in Sources */,
 				82D66AE82864506E005E101B /* OffersViewController.swift in Sources */,
 				82D66B0228648EC3005E101B /* BannerTableViewCell.swift in Sources */,
 				82D66AE628645060005E101B /* DiningViewController.swift in Sources */,
+				82983BFA28659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.swift in Sources */,
 				82D66AF12864515C005E101B /* ZomatoTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

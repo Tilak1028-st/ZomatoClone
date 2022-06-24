@@ -13,5 +13,9 @@ class StringConstant
     static var filterCell = "FilterCollectionViewCell"
     static var productCell = "ProductTableViewCell"
     static var bannerCell = "BannerTableViewCell"
-    
+    static var productCollectionCell = "ProductCollectionViewCell"
+    static var topBrandTableCell = "TopBrandTableViewCell"
+    static var brandItemCollectionCell = "BrandItemCollectionViewCell"
+    static var quickCheckoutTableCell = "QuickCheckoutTableViewCell"
+    static var quickCheckoutCollectViewCell = "QuickCheckoutItemCollectionViewCell"
 }
