@@ -12,7 +12,7 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var productCollectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        productCollectionView.register(UINib(nibName: StringConstant.productCollectionCell, bundle: nil), forCellWithReuseIdentifier: StringConstant.productCollectionCell)
+        Utility.registerCollectionViewCell(collectionView: productCollectionView, cellName: StringConstant.productCollectionCell)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
