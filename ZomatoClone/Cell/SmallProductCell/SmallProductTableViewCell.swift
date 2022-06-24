@@ -41,7 +41,7 @@ extension SmallProductTableViewCell: UICollectionViewDelegate, UICollectionViewD
         let item = smallProductCollectionViewCell.dequeueReusableCell(withReuseIdentifier: StringConstant.smallProductCollectionViewCell, for: indexPath) as! SmallProductCollectionViewCell
         item.layer.borderWidth = 0.5
         item.layer.borderColor = UIColor.gray.cgColor
-        item.layer.cornerRadius = 12
+        item.layer.cornerRadius = 15
         item.layer.shadowRadius = 5
         item.layer.shadowColor = UIColor.red.cgColor
         item.layer.shadowOpacity = 0.7

@@ -37,7 +37,7 @@ extension QuickCheckoutTableViewCell: UICollectionViewDelegate, UICollectionView
         //item.layer.cornerRadius
         item.layer.borderWidth = 0.5
         item.layer.borderColor = UIColor.gray.cgColor
-        item.layer.cornerRadius = 12
+        item.layer.cornerRadius = 15
         item.layer.shadowRadius = 5
         item.layer.shadowColor = UIColor.red.cgColor
         item.layer.shadowOpacity = 0.7

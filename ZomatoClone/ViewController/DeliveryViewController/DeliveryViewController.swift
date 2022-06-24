@@ -91,13 +91,15 @@ class DeliveryViewController: UIViewController {
             return cell
         case .restaurantsCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.restaurantCell, for: indexPath) as! RestaurantableViewCell
-            cell.contentView.layer.borderWidth = 0.5
-            cell.contentView.layer.borderColor = UIColor.gray.cgColor
-            cell.contentView.layer.cornerRadius = 12
-            cell.contentView.layer.shadowRadius = 5
-            cell.contentView.layer.shadowColor = UIColor.gray.cgColor
-            cell.contentView.layer.shadowOpacity = 0.7
-            cell.contentView.layer.shadowOffset = CGSize(width: 0, height: 5)
+            cell.cellView.layer.borderWidth = 0.5
+           // cell.cellView.layer.masksToBounds = false
+            cell.cellView.layer.borderColor = UIColor.gray.cgColor
+            cell.cellView.layer.cornerRadius = 12
+            cell.cellView.layer.shadowRadius = 5
+            cell.cellView.layer.shadowColor = UIColor.gray.cgColor
+            cell.cellView.layer.shadowOpacity = 0.7
+            cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 5)
+            cell.productImageView.layer.cornerRadius = 12
             return cell
         }
     }
@@ -158,7 +160,7 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if DeliverySection.allCases[indexPath.section] == .quickCheckoutCell {
+        if DeliverySection.allCases[indexPath.section] == .quickCheckoutCell || DeliverySection.allCases[indexPath.section] == .restaurantsCell {
             return 300
         } else {
             return 250

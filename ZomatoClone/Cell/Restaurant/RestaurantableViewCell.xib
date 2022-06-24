@@ -4,73 +4,91 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="273" id="KGk-i7-Jjw" customClass="RestaurantableViewCell" customModule="ZomatoClone" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="463" height="273"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="319" id="KGk-i7-Jjw" customClass="RestaurantableViewCell" customModule="ZomatoClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="463" height="319"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="463" height="273"/>
+                <rect key="frame" x="0.0" y="0.0" width="463" height="319"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="olW-PA-sMP">
-                        <rect key="frame" x="0.0" y="0.0" width="463" height="177.5"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London Yard Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klE-5q-AF0">
-                        <rect key="frame" x="10" y="182.5" width="169" height="24"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Italian, Beverages, Desserts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuu-en-ATE">
-                        <rect key="frame" x="10" y="215" width="333" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zomato recycle more plastic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw7-x6-afc">
-                        <rect key="frame" x="10" y="243" width="443" height="30"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uop-fS-VsO">
+                        <rect key="frame" x="10" y="10" width="443" height="299"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="olW-PA-sMP">
+                                <rect key="frame" x="0.0" y="0.0" width="443" height="194.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London Yard Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klE-5q-AF0">
+                                <rect key="frame" x="10" y="204.5" width="169" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zomato recycle more plastic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw7-x6-afc">
+                                <rect key="frame" x="0.0" y="268" width="443" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vXc-Hl-i8x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 for one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSb-jX-QkC">
+                                <rect key="frame" x="353" y="240" width="80" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Italian, Beverages, Desserts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuu-en-ATE">
+                                <rect key="frame" x="10" y="240" width="190.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="yLr-II-MX1"/>
+                            <constraint firstItem="olW-PA-sMP" firstAttribute="top" secondItem="Uop-fS-VsO" secondAttribute="top" id="049-QU-tiG"/>
+                            <constraint firstItem="Fuu-en-ATE" firstAttribute="top" secondItem="klE-5q-AF0" secondAttribute="bottom" constant="7.5" id="1Rm-wo-yOS"/>
+                            <constraint firstAttribute="trailing" secondItem="olW-PA-sMP" secondAttribute="trailing" id="Ccb-Mz-c1K"/>
+                            <constraint firstItem="Fuu-en-ATE" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" constant="10" id="Dlj-8N-U8s"/>
+                            <constraint firstItem="klE-5q-AF0" firstAttribute="top" secondItem="olW-PA-sMP" secondAttribute="bottom" constant="10" id="G2B-bS-78s"/>
+                            <constraint firstAttribute="trailing" secondItem="vw7-x6-afc" secondAttribute="trailing" id="Kky-Pk-jNl"/>
+                            <constraint firstItem="vw7-x6-afc" firstAttribute="top" secondItem="Fuu-en-ATE" secondAttribute="bottom" constant="10" id="LNZ-bx-7KC"/>
+                            <constraint firstItem="klE-5q-AF0" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" constant="10" id="Qd5-4m-JwF"/>
+                            <constraint firstItem="rSb-jX-QkC" firstAttribute="centerY" secondItem="Fuu-en-ATE" secondAttribute="centerY" id="S1k-1G-9m4"/>
+                            <constraint firstAttribute="trailing" secondItem="rSb-jX-QkC" secondAttribute="trailing" constant="10" id="ZCd-02-Ze4"/>
+                            <constraint firstItem="olW-PA-sMP" firstAttribute="height" secondItem="Uop-fS-VsO" secondAttribute="height" multiplier="0.65" id="bhO-3q-N3p"/>
+                            <constraint firstAttribute="bottom" secondItem="vw7-x6-afc" secondAttribute="bottom" constant="10" id="cmv-9M-Cmv"/>
+                            <constraint firstItem="olW-PA-sMP" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" id="gL0-RL-tio"/>
+                            <constraint firstItem="vw7-x6-afc" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" id="wsQ-0F-z6m"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 for one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSb-jX-QkC">
-                        <rect key="frame" x="373" y="215" width="80" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="olW-PA-sMP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6FP-n0-1nK"/>
-                    <constraint firstAttribute="bottom" secondItem="vw7-x6-afc" secondAttribute="bottom" id="A8f-SY-lfh"/>
-                    <constraint firstItem="klE-5q-AF0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="HS5-Gr-gPI"/>
-                    <constraint firstAttribute="trailing" secondItem="rSb-jX-QkC" secondAttribute="trailing" constant="10" id="JLI-zk-Zf9"/>
-                    <constraint firstItem="Fuu-en-ATE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="LC8-Ds-VIn"/>
-                    <constraint firstItem="olW-PA-sMP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OmZ-eD-oa6"/>
-                    <constraint firstItem="vw7-x6-afc" firstAttribute="top" secondItem="rSb-jX-QkC" secondAttribute="bottom" constant="10" id="PEW-g0-rOg"/>
-                    <constraint firstAttribute="trailing" secondItem="olW-PA-sMP" secondAttribute="trailing" id="QjJ-KK-6J5"/>
-                    <constraint firstAttribute="trailing" secondItem="vw7-x6-afc" secondAttribute="trailing" constant="10" id="SWh-Uj-geB"/>
-                    <constraint firstItem="klE-5q-AF0" firstAttribute="top" secondItem="olW-PA-sMP" secondAttribute="bottom" constant="5" id="UVc-43-ce4"/>
-                    <constraint firstItem="vw7-x6-afc" firstAttribute="top" secondItem="Fuu-en-ATE" secondAttribute="bottom" constant="10" id="jjq-ww-QAw"/>
-                    <constraint firstItem="rSb-jX-QkC" firstAttribute="leading" secondItem="Fuu-en-ATE" secondAttribute="trailing" constant="30" id="nvF-C9-9u8"/>
-                    <constraint firstItem="vw7-x6-afc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xPb-cY-bbY"/>
+                    <constraint firstAttribute="trailing" secondItem="Uop-fS-VsO" secondAttribute="trailing" constant="10" id="VDS-GQ-vzN"/>
+                    <constraint firstAttribute="bottom" secondItem="Uop-fS-VsO" secondAttribute="bottom" constant="10" id="ZFM-oB-oRM"/>
+                    <constraint firstItem="Uop-fS-VsO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="oJE-vf-KAa"/>
+                    <constraint firstItem="Uop-fS-VsO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vei-11-wQM"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <constraints>
-                <constraint firstItem="olW-PA-sMP" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="0.65" id="PjZ-dt-xOt"/>
-            </constraints>
-            <point key="canvasLocation" x="235.50724637681162" y="186.49553571428569"/>
+            <connections>
+                <outlet property="cellView" destination="Uop-fS-VsO" id="I97-pg-h1l"/>
+                <outlet property="productImageView" destination="Uop-fS-VsO" id="xjl-tw-Sp3"/>
+            </connections>
+            <point key="canvasLocation" x="235.50724637681162" y="201.89732142857142"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="pizza" width="2000" height="1333"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
