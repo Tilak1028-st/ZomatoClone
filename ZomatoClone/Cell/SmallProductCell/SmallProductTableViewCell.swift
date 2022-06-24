@@ -13,7 +13,7 @@ class SmallProductTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        smallProductCollectionViewCell.register(UINib(nibName: StringConstant.smallProductCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: StringConstant.smallProductCollectionViewCell)
+        Utility.registerCollectionViewCell(collectionView: smallProductCollectionViewCell, cellName: StringConstant.smallProductCollectionViewCell)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

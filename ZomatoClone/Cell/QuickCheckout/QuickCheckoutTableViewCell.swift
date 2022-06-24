@@ -12,8 +12,7 @@ class QuickCheckoutTableViewCell: UITableViewCell {
     @IBOutlet weak var quickCheckoutCollectionVew: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        quickCheckoutCollectionVew.register(UINib(nibName: StringConstant.quickCheckoutCollectViewCell, bundle: nil), forCellWithReuseIdentifier: StringConstant.quickCheckoutCollectViewCell)
-        
+        Utility.registerCollectionViewCell(collectionView: quickCheckoutCollectionVew, cellName: StringConstant.quickCheckoutCollectViewCell)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
