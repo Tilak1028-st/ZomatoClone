@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		828AE6FE2869D62F001FF567 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828AE6FD2869D62F001FF567 /* LocationSearchViewController.swift */; };
+		828AE7012869D8AF001FF567 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828AE7002869D8AF001FF567 /* MapViewController.swift */; };
 		82983BF028656DEB00AD71C7 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82983BEE28656DEB00AD71C7 /* ProductCollectionViewCell.swift */; };
 		82983BF128656DEB00AD71C7 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82983BEF28656DEB00AD71C7 /* ProductCollectionViewCell.xib */; };
 		82983BF52865775A00AD71C7 /* BrandItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82983BF32865775A00AD71C7 /* BrandItemCollectionViewCell.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		828AE6FD2869D62F001FF567 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
+		828AE7002869D8AF001FF567 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		82983BEE28656DEB00AD71C7 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		82983BEF28656DEB00AD71C7 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		82983BF32865775A00AD71C7 /* BrandItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -95,6 +99,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		828AE6FC2869D603001FF567 /* LocationSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				828AE6FD2869D62F001FF567 /* LocationSearchViewController.swift */,
+			);
+			path = LocationSearchViewController;
+			sourceTree = "<group>";
+		};
+		828AE6FF2869D863001FF567 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				828AE7002869D8AF001FF567 /* MapViewController.swift */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
 		82983BF228656DF500AD71C7 /* ProductCollection */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +227,8 @@
 				82D66AED286450C2005E101B /* DiningViewController */,
 				82D66AEE286450CA005E101B /* OffersViewController */,
 				82D66AEF286450D3005E101B /* MoneyViewController */,
+				828AE6FF2869D863001FF567 /* MapViewController */,
+				828AE6FC2869D603001FF567 /* LocationSearchViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -433,9 +455,11 @@
 				82D66AF428647D31005E101B /* DeliveryTypeEnum.swift in Sources */,
 				82D66AE428645051005E101B /* DeliveryViewController.swift in Sources */,
 				82D66AEA2864507E005E101B /* MoneyViewController.swift in Sources */,
+				828AE6FE2869D62F001FF567 /* LocationSearchViewController.swift in Sources */,
 				82D66B0728648EF1005E101B /* TopBrandTableViewCell.swift in Sources */,
 				82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */,
 				82983C002865C86300AD71C7 /* SmallProductTableViewCell.swift in Sources */,
+				828AE7012869D8AF001FF567 /* MapViewController.swift in Sources */,
 				82983BF028656DEB00AD71C7 /* ProductCollectionViewCell.swift in Sources */,
 				82983C042865C8A200AD71C7 /* SmallProductCollectionViewCell.swift in Sources */,
 				82D66AC928644ADF005E101B /* SceneDelegate.swift in Sources */,

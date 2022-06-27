@@ -8,15 +8,31 @@
 import UIKit
 
 class TopBrandTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var baseView: UIView!
+    @IBOutlet weak var baseViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var brandCollectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var seeMoreButton: UIButton!
     @IBOutlet weak var brandCollectionView: UICollectionView!
+    @IBOutlet weak var collectionViewBottomConstraint: NSLayoutConstraint!
+    
+    var isShowSeeMoreButton: Bool? {
+        didSet {
+            brandCollectionView.reloadData()
+        }
+    }
+    var isFirstTimeCellShow: Bool = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         brandCollectionView.register(UINib(nibName: StringConstant.brandItemCollectionCell, bundle: nil), forCellWithReuseIdentifier: StringConstant.brandItemCollectionCell)
+        seeMoreButton.layer.borderWidth = 0.5
+        seeMoreButton.layer.borderColor = UIColor.gray.cgColor
+        seeMoreButton.layer.cornerRadius = 8
     }
-
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -29,12 +45,21 @@ extension TopBrandTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
 {
     func numberOfSections(in collectionView: UICollectionView) -> Int
     {
-        1
+        2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return brandName.allCases.count
+        if isShowSeeMoreButton ?? false
+        {
+            seeMoreButton.setTitle("see less", for: .normal)
+            return 8
+        }
+        else
+        {
+            seeMoreButton.setTitle("see more", for: .normal)
+            return brandName.allCases.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
@@ -79,14 +104,23 @@ extension TopBrandTableViewCell: UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
+        
         let collectionWidth = collectionView.bounds.width
         let collectionHeight = collectionView.bounds.height
-        return CGSize(width: collectionWidth/4.3-2, height: collectionHeight/2)
+        print("CW: \(collectionView.bounds.width)")
+        print("CH: \(collectionView.bounds.height)")
+        
+        if isShowSeeMoreButton ?? false
+        {
+            isFirstTimeCellShow = false
+        }
+        
+        return CGSize(width: collectionWidth/4.3, height: 147.5)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat
     {
-        return 2
+        return 0
         
     }
     

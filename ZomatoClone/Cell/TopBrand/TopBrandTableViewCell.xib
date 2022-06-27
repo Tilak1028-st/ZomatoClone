@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,43 +11,66 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopBrandTableViewCell" rowHeight="186" id="KGk-i7-Jjw" customClass="TopBrandTableViewCell" customModule="ZomatoClone" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopBrandTableViewCell" rowHeight="230" id="KGk-i7-Jjw" customClass="TopBrandTableViewCell" customModule="ZomatoClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-sO-gxk">
-                        <rect key="frame" x="10" y="0.0" width="300" height="186"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="TOe-U4-or5">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <connections>
-                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="pA9-CQ-tdM"/>
-                            <outlet property="delegate" destination="KGk-i7-Jjw" id="eAh-l0-V8d"/>
-                        </connections>
-                    </collectionView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-1X-aOr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-sO-gxk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="195"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="TOe-U4-or5">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="KGk-i7-Jjw" id="pA9-CQ-tdM"/>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="eAh-l0-V8d"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJh-si-A1c">
+                                <rect key="frame" x="0.0" y="200" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QRA-Ba-3xC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="see more" imagePadding="5" titleAlignment="automatic">
+                                    <imageReference key="image" image="chevron.down" catalog="system" symbolScale="small"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dJh-si-A1c" secondAttribute="trailing" id="gYT-Ib-MFq"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="mX8-sO-gxk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="NeG-qF-jvb"/>
-                    <constraint firstItem="mX8-sO-gxk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ech-qt-0rf"/>
-                    <constraint firstAttribute="bottom" secondItem="mX8-sO-gxk" secondAttribute="bottom" id="ez5-5f-8nf"/>
-                    <constraint firstAttribute="trailing" secondItem="mX8-sO-gxk" secondAttribute="trailing" constant="10" id="ydX-x8-m1J"/>
+                    <constraint firstAttribute="trailing" secondItem="rxz-1X-aOr" secondAttribute="trailing" id="2Wj-nl-Mll"/>
+                    <constraint firstAttribute="bottom" secondItem="rxz-1X-aOr" secondAttribute="bottom" id="IsI-Jq-y7q"/>
+                    <constraint firstItem="rxz-1X-aOr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TzE-AR-OJ9"/>
+                    <constraint firstItem="rxz-1X-aOr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gk8-HB-m7a"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="brandCollectionView" destination="mX8-sO-gxk" id="FIS-u1-d2O"/>
+                <outlet property="seeMoreButton" destination="dJh-si-A1c" id="dp7-c2-NSQ"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="157.36607142857142"/>
+            <point key="canvasLocation" x="135" y="172"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

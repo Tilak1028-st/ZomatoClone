@@ -21,4 +21,8 @@ class StringConstant
     static var smallProductTableCell = "SmallProductTableViewCell"
     static var smallProductCollectionViewCell = "SmallProductCollectionViewCell"
     static var restaurantCell = "RestaurantableViewCell"
+    
+    
+    static var locationSearchVc = "LocationSearchViewController"
+    static var mapVc = "MapViewController"
 }

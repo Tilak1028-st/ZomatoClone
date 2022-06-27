@@ -12,11 +12,22 @@ class DeliveryViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var productsTableView: UITableView!
     @IBOutlet weak var filterCollectionView: UICollectionView!
+    @IBOutlet weak var rightBarButton: UIBarButtonItem!
+    @IBOutlet weak var leftBarButton: UIBarButtonItem!
+    
+    
+    var isShowSeeMoreButton: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpview()
     }
+    
+    @IBAction func seeMorePressed(_ sender: UIButton) {
+        isShowSeeMoreButton = !isShowSeeMoreButton
+        self.productsTableView.reloadData()
+    }
+   
     
 //MARK:  - SetUpView
     
@@ -31,7 +42,26 @@ class DeliveryViewController: UIViewController {
         Utility.registerCell(tableView: productsTableView, cellName: StringConstant.restaurantCell)
         
         productsTableView.separatorColor = UIColor.clear
+        let dummyViewHeight = CGFloat(40)
+        
+        self.productsTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.productsTableView.bounds.size.width, height: dummyViewHeight))
+        self.productsTableView.contentInset = UIEdgeInsets(top: -dummyViewHeight, left: 0, bottom: 0, right: 0)
+       // leftBarButton.title = "New York"
+        
+       
     }
+    
+    @IBAction func openMap(_ sender: UIBarButtonItem)
+    {
+        let shareVc = storyboard?.instantiateViewController(withIdentifier: StringConstant.locationSearchVc) as! LocationSearchViewController
+        
+        if let sheet = shareVc.sheetPresentationController {
+            sheet.detents = [ .medium(), .large()]
+        }
+        shareVc.navController = self.navigationController
+        present(shareVc, animated: true, completion: nil)
+    }
+    
     
     //MARK:  - Product tableView Section header
     
@@ -67,12 +97,18 @@ class DeliveryViewController: UIViewController {
             
         case .topBrandCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
+            cell.isShowSeeMoreButton = self.isShowSeeMoreButton
+     //       cell.seeMoreButton.isHidden = true
             return cell
         case .quickCheckoutCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.quickCheckoutTableCell, for: indexPath) as! QuickCheckoutTableViewCell
             return cell
         case .eatHappyCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
+            cell.seeMoreButton.addTarget(self, action: #selector(seeMorePressed(_:)), for: .touchUpInside)
+            cell.isShowSeeMoreButton = isShowSeeMoreButton
+            cell.brandCollectionView.reloadData()
+
             return cell
         case .recommendedCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
@@ -162,12 +198,37 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if DeliverySection.allCases[indexPath.section] == .quickCheckoutCell || DeliverySection.allCases[indexPath.section] == .restaurantsCell {
             return 300
-        } else {
+        }
+        else if DeliverySection.allCases[indexPath.section] == .topBrandCell
+        {
+            return 330
+        }
+        else if DeliverySection.allCases[indexPath.section] == .eatHappyCell
+        {
+            if isShowSeeMoreButton {
+                return 590 + 5 + 30
+            } else {
+                return  295 + 5 + 30
+            }
+        }
+        else
+        {
             return 250
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return viewForHeader(section: section)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0
+        }
+        else
+        {
+            return 30
+        }
+
     }
 }

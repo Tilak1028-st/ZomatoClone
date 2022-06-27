@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offerCard" translatesAutoresizingMaskIntoConstraints="NO" id="uzE-QZ-m7J">
-                        <rect key="frame" x="10" y="10" width="336" height="163"/>
+                        <rect key="frame" x="10" y="0.0" width="336" height="173"/>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="uzE-QZ-m7J" secondAttribute="trailing" constant="10" id="AjZ-Vp-zaa"/>
                     <constraint firstItem="uzE-QZ-m7J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="HGX-LD-if9"/>
-                    <constraint firstItem="uzE-QZ-m7J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Ow7-X4-bsx"/>
+                    <constraint firstItem="uzE-QZ-m7J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ow7-X4-bsx"/>
                     <constraint firstAttribute="bottom" secondItem="uzE-QZ-m7J" secondAttribute="bottom" constant="10" id="yWP-lE-yin"/>
                 </constraints>
             </tableViewCellContentView>

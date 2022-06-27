@@ -34,23 +34,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Pino'z Pizza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSe-1X-RXO">
-                                <rect key="frame" x="5" y="5" width="85.5" height="20"/>
+                                <rect key="frame" x="5" y="5" width="85.5" height="28.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USG-NO-lbb">
-                                <rect key="frame" x="135" y="5" width="45" height="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USG-NO-lbb">
+                                <rect key="frame" x="126" y="5" width="54" height="28.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="jae-da-A9y"/>
+                                    <constraint firstAttribute="width" constant="54" id="jkr-mc-9Ly"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="rWR-h3-FXX"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="4.0">
+                                <buttonConfiguration key="configuration" style="filled" image="icons8-star-10" imagePlacement="trailing" title="4.0" imagePadding="0.0">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
                                     <color key="baseBackgroundColor" red="0.14072086936600545" green="0.54177916948571969" blue="0.24289081407651275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33 mins " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75n-VS-4cz">
-                                <rect key="frame" x="8" y="33" width="48.5" height="14.5"/>
+                                <rect key="frame" x="8" y="41.5" width="48.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,6 +90,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="icons8-star-10" width="10" height="10"/>
         <image name="plate3" width="275" height="183"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="443" height="194.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London Yard Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klE-5q-AF0">
-                                <rect key="frame" x="10" y="204.5" width="169" height="28"/>
+                                <rect key="frame" x="10" y="204.5" width="169" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,13 +39,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 for one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSb-jX-QkC">
-                                <rect key="frame" x="353" y="240" width="80" height="18"/>
+                                <rect key="frame" x="353" y="245" width="80" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Italian, Beverages, Desserts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuu-en-ATE">
-                                <rect key="frame" x="10" y="240" width="190.5" height="18"/>
+                                <rect key="frame" x="10" y="245" width="190.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                             <constraint firstItem="Fuu-en-ATE" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" constant="10" id="Dlj-8N-U8s"/>
                             <constraint firstItem="klE-5q-AF0" firstAttribute="top" secondItem="olW-PA-sMP" secondAttribute="bottom" constant="10" id="G2B-bS-78s"/>
                             <constraint firstAttribute="trailing" secondItem="vw7-x6-afc" secondAttribute="trailing" id="Kky-Pk-jNl"/>
-                            <constraint firstItem="vw7-x6-afc" firstAttribute="top" secondItem="Fuu-en-ATE" secondAttribute="bottom" constant="10" id="LNZ-bx-7KC"/>
+                            <constraint firstItem="vw7-x6-afc" firstAttribute="top" secondItem="Fuu-en-ATE" secondAttribute="bottom" constant="5" id="LNZ-bx-7KC"/>
                             <constraint firstItem="klE-5q-AF0" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" constant="10" id="Qd5-4m-JwF"/>
                             <constraint firstItem="rSb-jX-QkC" firstAttribute="centerY" secondItem="Fuu-en-ATE" secondAttribute="centerY" id="S1k-1G-9m4"/>
                             <constraint firstAttribute="trailing" secondItem="rSb-jX-QkC" secondAttribute="trailing" constant="10" id="ZCd-02-Ze4"/>

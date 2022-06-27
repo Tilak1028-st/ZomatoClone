@@ -24,6 +24,81 @@
             </objects>
             <point key="canvasLocation" x="-585" y="-200"/>
         </scene>
+        <!--Select a Location-->
+        <scene sceneID="MIX-2k-D9i">
+            <objects>
+                <viewController restorationIdentifier="LocationSearchViewController" storyboardIdentifier="LocationSearchViewController" id="gVK-bU-ARQ" customClass="LocationSearchViewController" customModule="ZomatoClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vPY-6Z-ewf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xo0-Hb-7FB">
+                                <rect key="frame" x="10" y="143" width="394" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="d4f-1p-C1Z"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="location" catalog="system" title="Use Current Location" imagePadding="20"/>
+                                <connections>
+                                    <action selector="getCurrentLocation:" destination="gVK-bU-ARQ" eventType="touchUpInside" id="ipF-43-Tgk"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" placeholder="Search for area, street name.." translatesAutoresizingMaskIntoConstraints="NO" id="AGM-me-Uzy">
+                                <rect key="frame" x="10" y="89" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="y2R-fe-XlY"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzv-fC-xVE">
+                                <rect key="frame" x="10" y="54" width="394" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9rK-x4-syA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b6T-qA-s5E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pzv-fC-xVE" firstAttribute="top" secondItem="b6T-qA-s5E" secondAttribute="top" constant="10" id="2n5-Fu-U0Q"/>
+                            <constraint firstItem="Xo0-Hb-7FB" firstAttribute="top" secondItem="AGM-me-Uzy" secondAttribute="bottom" constant="10" id="8Oz-QR-0rZ"/>
+                            <constraint firstItem="AGM-me-Uzy" firstAttribute="leading" secondItem="b6T-qA-s5E" secondAttribute="leading" constant="10" id="FGs-81-ih4"/>
+                            <constraint firstItem="b6T-qA-s5E" firstAttribute="trailing" secondItem="pzv-fC-xVE" secondAttribute="trailing" constant="10" id="K5t-dC-wW2"/>
+                            <constraint firstItem="Xo0-Hb-7FB" firstAttribute="leading" secondItem="b6T-qA-s5E" secondAttribute="leading" constant="10" id="Qgt-7l-K6a"/>
+                            <constraint firstItem="AGM-me-Uzy" firstAttribute="top" secondItem="pzv-fC-xVE" secondAttribute="bottom" constant="5" id="eBD-gF-IdZ"/>
+                            <constraint firstItem="b6T-qA-s5E" firstAttribute="trailing" secondItem="Xo0-Hb-7FB" secondAttribute="trailing" constant="10" id="f9t-zK-So4"/>
+                            <constraint firstItem="pzv-fC-xVE" firstAttribute="leading" secondItem="b6T-qA-s5E" secondAttribute="leading" constant="10" id="fC7-iO-En0"/>
+                            <constraint firstItem="AGM-me-Uzy" firstAttribute="trailing" secondItem="b6T-qA-s5E" secondAttribute="trailing" constant="10" id="t5L-rx-xgv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select a Location" id="geJ-f8-WUA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kea-wl-NaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1286" y="1879"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="iDy-O5-dCJ">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="ymm-is-hoR" customClass="MapViewController" customModule="ZomatoClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tkj-tM-UeC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3Le-ZZ-qDg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oMT-kn-tlf">
+                        <barButtonItem key="backBarButtonItem" title="Choose Your Location" id="ARe-zU-v5t"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5O1-h8-o8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="1884"/>
+        </scene>
         <!--Delivery View Controller-->
         <scene sceneID="YYm-XC-fvM">
             <objects>
@@ -32,7 +107,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Xjy-u7-egg">
+                            <searchBar contentMode="redraw" text="" placeholder="Search &quot;ice cream&quot;" translatesAutoresizingMaskIntoConstraints="NO" id="Xjy-u7-egg">
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -78,10 +153,30 @@
                             <constraint firstItem="bvJ-Os-xAS" firstAttribute="trailing" secondItem="bLv-Dh-QmN" secondAttribute="trailing" id="zRg-r8-FbA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YRV-MY-Elp"/>
+                    <navigationItem key="navigationItem" id="YRV-MY-Elp">
+                        <leftBarButtonItems>
+                            <barButtonItem image="pin" catalog="system" id="NW0-FI-o58">
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="openMap:" destination="upc-14-Tfx" id="cgG-X8-Gab"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="New york " id="4jV-wg-vKc">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="openMap:" destination="upc-14-Tfx" id="Dfu-oJ-ecx"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" image="icons8-wine-glass-50" id="OVK-Je-0MJ">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="filterCollectionView" destination="bLv-Dh-QmN" id="nFI-cn-R5g"/>
+                        <outlet property="leftBarButton" destination="4jV-wg-vKc" id="mqh-SC-9Xa"/>
                         <outlet property="productsTableView" destination="3EB-UN-Unk" id="StB-lS-JRC"/>
+                        <outlet property="rightBarButton" destination="OVK-Je-0MJ" id="oo4-53-f0W"/>
                         <outlet property="searchBar" destination="Xjy-u7-egg" id="UnA-vE-mRB"/>
                     </connections>
                 </viewController>
@@ -239,7 +334,10 @@
     </scenes>
     <resources>
         <image name="command" catalog="system" width="128" height="115"/>
+        <image name="icons8-wine-glass-50" width="50" height="50"/>
         <image name="lifepreserver" catalog="system" width="128" height="121"/>
+        <image name="location" catalog="system" width="128" height="118"/>
+        <image name="pin" catalog="system" width="119" height="128"/>
         <image name="scooter" catalog="system" width="128" height="95"/>
         <image name="wallet.pass" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">

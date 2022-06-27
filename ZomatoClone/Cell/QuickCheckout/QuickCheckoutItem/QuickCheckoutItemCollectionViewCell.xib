@@ -70,23 +70,26 @@
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmy-vi-TrC">
-                                        <rect key="frame" x="176" y="7" width="55" height="29.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmy-vi-TrC">
+                                        <rect key="frame" x="178" y="7" width="53" height="29.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="53" id="c8B-yK-wvd"/>
+                                            <constraint firstAttribute="height" constant="29.5" id="lWb-td-Bg5"/>
+                                        </constraints>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="4.0 *">
+                                        <buttonConfiguration key="configuration" style="filled" image="icons8-star-10" imagePlacement="trailing" title="4.0" imagePadding="1">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                             <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Fmy-vi-TrC" secondAttribute="bottom" constant="7" id="4PG-vO-G3x"/>
                                     <constraint firstItem="deX-FT-EpM" firstAttribute="leading" secondItem="EvJ-Nn-0to" secondAttribute="leading" constant="5" id="9DN-H3-zb2"/>
                                     <constraint firstItem="Fmy-vi-TrC" firstAttribute="centerY" secondItem="EvJ-Nn-0to" secondAttribute="centerY" id="FKz-ca-cMW"/>
                                     <constraint firstItem="deX-FT-EpM" firstAttribute="centerY" secondItem="EvJ-Nn-0to" secondAttribute="centerY" id="W2h-y2-qgv"/>
                                     <constraint firstAttribute="trailing" secondItem="Fmy-vi-TrC" secondAttribute="trailing" constant="5" id="cE1-eR-Ip7"/>
-                                    <constraint firstItem="Fmy-vi-TrC" firstAttribute="top" secondItem="EvJ-Nn-0to" secondAttribute="top" constant="7" id="t3g-PK-SYl"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -130,6 +133,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="icons8-star-10" width="10" height="10"/>
         <image name="plate2" width="384" height="294"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
