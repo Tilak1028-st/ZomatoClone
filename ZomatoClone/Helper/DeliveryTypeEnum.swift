@@ -27,6 +27,8 @@ enum DeliverySection: String, CaseIterable
     case restaurantsCell = "100+ restaurants around you"
 }
 
+
+
 enum filterRow: String, CaseIterable
 {
     case sort = "Sort"
@@ -40,3 +42,44 @@ enum filterRow: String, CaseIterable
 }
 
 
+enum smallProductImage
+{
+    
+    static let image1 = UIImage(named: "food1")
+    static let image2 = UIImage(named: "food2")
+    static let image3 = UIImage(named: "food3")
+    static let image4 = UIImage(named: "food4")
+    static let image5 = UIImage(named: "food5")
+}
+
+enum featuredResturantImage
+{
+    static let image1 = UIImage(named: "food1")
+    static let image2 = UIImage(named: "food6")
+    static let image3 = UIImage(named: "food3")
+    static let image4 = UIImage(named: "food7")
+    static let image5 = UIImage(named: "food2")
+}
+
+enum quickcheckoutImage
+{
+    static let image1 = UIImage(named: "food1")
+    static let image2 = UIImage(named: "food6")
+    static let image3 = UIImage(named: "food3")
+    static let image4 = UIImage(named: "food7")
+    static let image5 = UIImage(named: "food2")
+}
+
+enum recommendedForYouImage
+{
+    static let image1 = UIImage(named: "food1")
+    static let image2 = UIImage(named: "food6")
+    static let image3 = UIImage(named: "food3")
+    static let image4 = UIImage(named: "food7")
+    static let image5 = UIImage(named: "food2")
+}
+
+enum tableCellImage
+{
+    
+}

@@ -9,6 +9,7 @@ import UIKit
 
 class SmallProductCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var smallProductImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
