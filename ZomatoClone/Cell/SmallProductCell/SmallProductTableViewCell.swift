@@ -10,10 +10,12 @@ import UIKit
 class SmallProductTableViewCell: UITableViewCell {
 
     @IBOutlet weak var smallProductCollectionViewCell: UICollectionView!
+    var productArray: [Product]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         Utility.registerCollectionViewCell(collectionView: smallProductCollectionViewCell, cellName: StringConstant.smallProductCollectionViewCell)
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,7 +35,7 @@ extension SmallProductTableViewCell: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-       5
+        return productArray?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
@@ -76,27 +78,26 @@ extension SmallProductTableViewCell
         item.layer.borderColor = UIColor.gray.cgColor
         item.layer.cornerRadius = 15
         item.layer.shadowRadius = 5
-        item.layer.shadowColor = UIColor.red.cgColor
         item.layer.shadowOpacity = 0.7
         item.layer.shadowOffset = CGSize(width: 0, height: 5)
+        item.smallProductArray = productArray?[indexPath.item]
         
-        
-        switch indexPath.item {
-        case 0:
-            item.smallProductImage.image = smallProductImage.image1
-        case 1:
-            item.smallProductImage.image = smallProductImage.image2
-        case 2:
-            item.smallProductImage.image = smallProductImage.image3
-        case 3:
-            item.smallProductImage.image = smallProductImage.image4
-        case 4:
-            item.smallProductImage.image = smallProductImage.image5
-        
-        default:
-            item.smallProductImage.image = smallProductImage.image1
-        
-        }
+//        switch indexPath.item {
+//        case 0:
+//            item.smallProductImage.image = smallProductImage.image1
+//        case 1:
+//            item.smallProductImage.image = smallProductImage.image2
+//        case 2:
+//            item.smallProductImage.image = smallProductImage.image3
+//        case 3:
+//            item.smallProductImage.image = smallProductImage.image4
+//        case 4:
+//            item.smallProductImage.image = smallProductImage.image5
+//
+//        default:
+//            item.smallProductImage.image = smallProductImage.image1
+//
+//        }
         return item
     }
 }

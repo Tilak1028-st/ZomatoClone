@@ -19,9 +19,18 @@ class DeliveryViewController: UIViewController {
     var isShowSeeMoreButton: Bool = false
     var currentLocation: String = "Mumbai"
     
+    var arrFeturesProducts = [Product]()
+    var arrRecommendedProducts = [Product]()
+    var arrayAmazingSnacksProducts = [Product]()
+    var arrDeliciousProducts = [Product]()
+    var arrBurgerProducts = [Product]()
+    var arrSweetsProducts = [Product]()
+    var arrDesertProducts = [Product]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpview()
+        setUpProductDetails()
     }
     
     @IBAction func seeMorePressed(_ sender: UIButton) {
@@ -38,6 +47,7 @@ class DeliveryViewController: UIViewController {
     
     private func setUpview()
     {
+        
         Utility.registerCollectionViewCell(collectionView: filterCollectionView, cellName: StringConstant.filterCell)
         Utility.registerCell(tableView: productsTableView, cellName: StringConstant.productCell)
         Utility.registerCell(tableView: productsTableView, cellName: StringConstant.bannerCell)
@@ -51,7 +61,7 @@ class DeliveryViewController: UIViewController {
         
         self.productsTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.productsTableView.bounds.size.width, height: dummyViewHeight))
         self.productsTableView.contentInset = UIEdgeInsets(top: -dummyViewHeight, left: 0, bottom: 0, right: 0)
-        
+        productsTableView.reloadData()
     }
     
     @IBAction func openMap(_ sender: UIBarButtonItem)
@@ -111,22 +121,49 @@ class DeliveryViewController: UIViewController {
             cell.seeMoreButton.addTarget(self, action: #selector(seeMorePressed(_:)), for: .touchUpInside)
             cell.isShowSeeMoreButton = isShowSeeMoreButton
             cell.brandCollectionView.reloadData()
-
             return cell
         case .recommendedCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
+            cell.productArray = self.arrRecommendedProducts
+            cell.smallProductCollectionViewCell.reloadData()
             return cell
         case .featureDCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
+            cell.productArray = self.arrFeturesProducts
+            cell.smallProductCollectionViewCell.reloadData()
             return cell
         case .amazingSnacksCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
+            cell.productArray = self.arrayAmazingSnacksProducts
+            cell.smallProductCollectionViewCell.reloadData()
             return cell
         case .againBannerCell:
             let bannerCell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.bannerCell, for: indexPath) as! BannerTableViewCell
             return bannerCell
-        case .deliciousCell, .eveningCell, .deliciousBurgersCell, .eveningSweetCell, .desertCell :
+        case .eveningCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
+            cell.productArray = self.arrDeliciousProducts
+            cell.smallProductCollectionViewCell.reloadData()
+            return cell
+        case .deliciousCell:
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
+            cell.productArray = self.arrDeliciousProducts
+            cell.smallProductCollectionViewCell.reloadData()
+            return cell
+        case .deliciousBurgersCell:
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
+            cell.productArray = self.arrBurgerProducts
+            cell.smallProductCollectionViewCell.reloadData()
+            return cell
+        case .eveningSweetCell:
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
+            cell.productArray = self.arrSweetsProducts
+            cell.smallProductCollectionViewCell.reloadData()
+            return cell
+        case .desertCell:
+            let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.smallProductTableCell, for: indexPath) as! SmallProductTableViewCell
+            cell.productArray = self.arrDesertProducts
+            cell.smallProductCollectionViewCell.reloadData()
             return cell
         case .restaurantsCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.restaurantCell, for: indexPath) as! RestaurantableViewCell
@@ -233,5 +270,63 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
             return 30
         }
 
+    }
+}
+
+
+extension DeliveryViewController {
+    func setUpProductDetails()
+    {
+        //Features products
+        arrFeturesProducts.append(Product.init(productName: "Puffizza", productDiscount: 40, productRating: "3", productImage: UIImage(named: "food1")!, productDeliveryTime: 32, productPrice: "125 for one"))
+        arrFeturesProducts.append(Product.init(productName: "Cake Live", productDiscount: 50, productRating: "4", productImage: UIImage(named: "food2")!, productDeliveryTime: 40, productPrice: "100 for one"))
+        arrFeturesProducts.append(Product.init(productName: "Honest", productDiscount: 40, productRating: "3", productImage: UIImage(named: "food3")!, productDeliveryTime: 23, productPrice: "150 for one"))
+        arrFeturesProducts.append(Product.init(productName: "Jay Bhavani", productDiscount: 50, productRating: "4", productImage: UIImage(named: "food4")!, productDeliveryTime: 27, productPrice: "175 for one"))
+        arrFeturesProducts.append(Product.init(productName: "City corner", productDiscount: 60, productRating: "4", productImage: UIImage(named: "food5")!, productDeliveryTime: 35, productPrice: "200 for one"))
+        
+        //RecommendedProducts
+        arrRecommendedProducts.append(Product.init(productName: "Burger King", productDiscount: 60, productRating: "3", productImage: UIImage(named: "food6")!, productDeliveryTime: 35, productPrice: "150 for one"))
+        arrRecommendedProducts.append(Product.init(productName: "Cake Live", productDiscount: 50, productRating: "4", productImage: UIImage(named: "food5")!, productDeliveryTime: 40, productPrice: "100 for one"))
+        arrRecommendedProducts.append(Product.init(productName: "Honest", productDiscount: 40, productRating: "3", productImage: UIImage(named: "food7")!, productDeliveryTime: 23, productPrice: "170 for one"))
+        arrRecommendedProducts.append(Product.init(productName: "Jay Bhavani", productDiscount: 50, productRating: "4", productImage: UIImage(named: "food1")!, productDeliveryTime: 27, productPrice: "180 for one"))
+        arrRecommendedProducts.append(Product.init(productName: "City corner", productDiscount: 60, productRating: "4", productImage: UIImage(named: "food3")!, productDeliveryTime: 35, productPrice: "220 for one"))
+        
+        //snacks
+        arrayAmazingSnacksProducts.append(Product.init(productName: "Honest", productDiscount: 88, productRating: "3", productImage: UIImage(named: "snacks1")!, productDeliveryTime: 32, productPrice: "125 for one"))
+        arrayAmazingSnacksProducts.append(Product.init(productName: "Ashirwad", productDiscount: 77, productRating: "4", productImage: UIImage(named: "snacks2")!, productDeliveryTime: 40, productPrice: "100 for one"))
+        arrayAmazingSnacksProducts.append(Product.init(productName: "PFZ", productDiscount: 33, productRating: "3", productImage: UIImage(named: "snacks3")!, productDeliveryTime: 20, productPrice: "150 for one"))
+        arrayAmazingSnacksProducts.append(Product.init(productName: "Jay Bhavani", productDiscount: 55, productRating: "4", productImage: UIImage(named: "snacks4")!, productDeliveryTime: 35, productPrice: "175 for one"))
+        arrayAmazingSnacksProducts.append(Product.init(productName: "City corner", productDiscount: 66, productRating: "4", productImage: UIImage(named: "snacks5")!, productDeliveryTime: 45, productPrice: "200 for one"))
+        
+       //delicious
+        arrDeliciousProducts.append(Product.init(productName: "Puffizza", productDiscount: 40, productRating: "3", productImage: UIImage(named: "delicious1")!, productDeliveryTime: 32, productPrice: "125 for one"))
+        arrDeliciousProducts.append(Product.init(productName: "Cake Live", productDiscount: 50, productRating: "4", productImage: UIImage(named: "delicious2")!, productDeliveryTime: 40, productPrice: "100 for one"))
+        arrDeliciousProducts.append(Product.init(productName: "Honest", productDiscount: 40, productRating: "3", productImage: UIImage(named: "delicious3")!, productDeliveryTime: 23, productPrice: "150 for one"))
+        arrDeliciousProducts.append(Product.init(productName: "Jay Bhavani", productDiscount: 50, productRating: "4", productImage: UIImage(named: "delicious4")!, productDeliveryTime: 27, productPrice: "175 for one"))
+        arrDeliciousProducts.append(Product.init(productName: "City corner", productDiscount: 60, productRating: "4", productImage: UIImage(named: "delicious5")!, productDeliveryTime: 35, productPrice: "200 for one"))
+        
+        //burger
+        arrBurgerProducts.append(Product.init(productName: "Diya Fast food", productDiscount: 35, productRating: "3", productImage: UIImage(named: "burger1")!, productDeliveryTime: 32, productPrice: "125 for one"))
+        arrBurgerProducts.append(Product.init(productName: "Burgerwale", productDiscount: 75, productRating: "4", productImage: UIImage(named: "burger2")!, productDeliveryTime: 10, productPrice: "100 for one"))
+        arrBurgerProducts.append(Product.init(productName: "Kutchi Marnavati", productDiscount: 45, productRating: "3", productImage: UIImage(named: "burger3")!, productDeliveryTime: 20, productPrice: "150 for one"))
+        arrBurgerProducts.append(Product.init(productName: "Tummy Fillers", productDiscount: 55, productRating: "4", productImage: UIImage(named: "burger4")!, productDeliveryTime: 25, productPrice: "175 for one"))
+        arrBurgerProducts.append(Product.init(productName: "McDonalds'", productDiscount: 65, productRating: "4", productImage: UIImage(named: "burger5")!, productDeliveryTime: 40, productPrice: "200 for one"))
+        
+        //sweets
+        
+        arrSweetsProducts.append(Product.init(productName: "Puffizza", productDiscount: 60, productRating: "3", productImage: UIImage(named: "sweet1")!, productDeliveryTime: 30, productPrice: "125 for one"))
+        arrSweetsProducts.append(Product.init(productName: "Cake Live", productDiscount: 70, productRating: "4", productImage: UIImage(named: "sweet2")!, productDeliveryTime: 45, productPrice: "100 for one"))
+        arrSweetsProducts.append(Product.init(productName: "Honest", productDiscount: 45, productRating: "3", productImage: UIImage(named: "sweet3")!, productDeliveryTime: 28, productPrice: "150 for one"))
+        arrSweetsProducts.append(Product.init(productName: "Jay Bhavani", productDiscount: 35, productRating: "4", productImage: UIImage(named: "sweet4")!, productDeliveryTime: 7, productPrice: "175 for one"))
+        arrSweetsProducts.append(Product.init(productName: "City corner", productDiscount: 78, productRating: "4", productImage: UIImage(named: "sweet5")!, productDeliveryTime: 45, productPrice: "200 for one"))
+        
+        //desert
+        
+        arrDesertProducts.append(Product.init(productName: "Havmor Hav", productDiscount: 80, productRating: "3", productImage: UIImage(named: "desert1")!, productDeliveryTime: 32, productPrice: "125 for one"))
+        arrDesertProducts.append(Product.init(productName: "Cake Live", productDiscount: 30, productRating: "4", productImage: UIImage(named: "desert2")!, productDeliveryTime: 40, productPrice: "100 for one"))
+        arrDesertProducts.append(Product.init(productName: "Puffing", productDiscount: 45, productRating: "3", productImage: UIImage(named: "desert3")!, productDeliveryTime: 23, productPrice: "150 for one"))
+        arrDesertProducts.append(Product.init(productName: "Dangee dums", productDiscount: 55, productRating: "4", productImage: UIImage(named: "desert4")!, productDeliveryTime: 27, productPrice: "175 for one"))
+        arrDesertProducts.append(Product.init(productName: "City corner", productDiscount: 68, productRating: "4", productImage: UIImage(named: "desert5")!, productDeliveryTime: 35, productPrice: "200 for one"))
+        
     }
 }

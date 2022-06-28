@@ -44,6 +44,7 @@
 		82D66B0828648EF1005E101B /* TopBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66B0628648EF1005E101B /* TopBrandTableViewCell.xib */; };
 		82D66B0C28648F1A005E101B /* QuickCheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66B0A28648F1A005E101B /* QuickCheckoutTableViewCell.swift */; };
 		82D66B0D28648F1A005E101B /* QuickCheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66B0B28648F1A005E101B /* QuickCheckoutTableViewCell.xib */; };
+		82E105DF286B12750057DAFB /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E105DE286B12750057DAFB /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		82D66B0628648EF1005E101B /* TopBrandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopBrandTableViewCell.xib; sourceTree = "<group>"; };
 		82D66B0A28648F1A005E101B /* QuickCheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		82D66B0B28648F1A005E101B /* QuickCheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuickCheckoutTableViewCell.xib; sourceTree = "<group>"; };
+		82E105DE286B12750057DAFB /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				82983C0E2865DDF700AD71C7 /* Utility */,
 				82D66ADE28644E79005E101B /* Constant */,
 				82D66AF228647D0E005E101B /* Helper */,
+				82E105DD286B124B0057DAFB /* Model */,
 				82D66AF5286483A8005E101B /* Cell */,
 				82D66ADB28644E38005E101B /* ViewController */,
 				82D66ADC28644E4A005E101B /* View */,
@@ -368,6 +371,14 @@
 			path = QuickCheckout;
 			sourceTree = "<group>";
 		};
+		82E105DD286B124B0057DAFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82E105DE286B12750057DAFB /* ProductModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,6 +468,7 @@
 				82D66AEA2864507E005E101B /* MoneyViewController.swift in Sources */,
 				828AE6FE2869D62F001FF567 /* LocationSearchViewController.swift in Sources */,
 				82D66B0728648EF1005E101B /* TopBrandTableViewCell.swift in Sources */,
+				82E105DF286B12750057DAFB /* ProductModel.swift in Sources */,
 				82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */,
 				82983C002865C86300AD71C7 /* SmallProductTableViewCell.swift in Sources */,
 				828AE7012869D8AF001FF567 /* MapViewController.swift in Sources */,

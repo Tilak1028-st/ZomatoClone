@@ -29,30 +29,36 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="VXZ-oo-HgO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.24464306999327434" green="0.34422075907592742" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Pino'z Pizza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSe-1X-RXO">
-                                <rect key="frame" x="5" y="5" width="85.5" height="28.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <rect key="frame" x="5" y="5" width="88.5" height="25"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USG-NO-lbb">
-                                <rect key="frame" x="126" y="5" width="54" height="28.5"/>
+                                <rect key="frame" x="126" y="5" width="54" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="jkr-mc-9Ly"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="rWR-h3-FXX"/>
+                                    <constraint firstAttribute="height" constant="25" id="rWR-h3-FXX"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="icons8-star-10" imagePlacement="trailing" title="4.0" imagePadding="0.0">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
                                     <color key="baseBackgroundColor" red="0.14072086936600545" green="0.54177916948571969" blue="0.24289081407651275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33 mins " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75n-VS-4cz">
-                                <rect key="frame" x="8" y="41.5" width="48.5" height="14.5"/>
+                                <rect key="frame" x="8" y="38" width="48.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 for one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TL-a3-CYN">
+                                <rect key="frame" x="8" y="57.5" width="66" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,10 +66,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6TL-a3-CYN" firstAttribute="top" secondItem="75n-VS-4cz" secondAttribute="bottom" constant="5" id="BnW-ja-9dV"/>
                             <constraint firstItem="75n-VS-4cz" firstAttribute="top" secondItem="NSe-1X-RXO" secondAttribute="bottom" constant="8" symbolic="YES" id="EM4-jn-3x3"/>
                             <constraint firstItem="77Z-VD-nR2" firstAttribute="leading" secondItem="l1J-oq-nCw" secondAttribute="leading" id="P2t-fw-Ohs"/>
                             <constraint firstItem="NSe-1X-RXO" firstAttribute="leading" secondItem="l1J-oq-nCw" secondAttribute="leading" constant="5" id="Qwo-oe-sik"/>
                             <constraint firstAttribute="trailing" secondItem="USG-NO-lbb" secondAttribute="trailing" constant="5" id="RFb-Ma-EkK"/>
+                            <constraint firstItem="6TL-a3-CYN" firstAttribute="leading" secondItem="l1J-oq-nCw" secondAttribute="leading" constant="8" id="SSI-Bo-m0D"/>
                             <constraint firstItem="USG-NO-lbb" firstAttribute="centerY" secondItem="NSe-1X-RXO" secondAttribute="centerY" id="YXN-Vr-UJV"/>
                             <constraint firstItem="USG-NO-lbb" firstAttribute="top" secondItem="l1J-oq-nCw" secondAttribute="top" constant="5" id="btE-KI-sd0"/>
                             <constraint firstAttribute="bottom" secondItem="77Z-VD-nR2" secondAttribute="bottom" id="bzW-Ly-m3i"/>
@@ -87,6 +95,11 @@
             </constraints>
             <size key="customSize" width="185" height="302"/>
             <connections>
+                <outlet property="deliveryTimelabel" destination="75n-VS-4cz" id="Bt6-Tv-nwI"/>
+                <outlet property="discountLabel" destination="77Z-VD-nR2" id="lTe-SM-wPg"/>
+                <outlet property="priceLabel" destination="6TL-a3-CYN" id="Tn8-hc-jwh"/>
+                <outlet property="productNameLabel" destination="NSe-1X-RXO" id="UXC-iS-MPS"/>
+                <outlet property="ratingButton" destination="USG-NO-lbb" id="wi8-1b-g7X"/>
                 <outlet property="smallProductImage" destination="m0t-iW-HLn" id="cCQ-xX-pdw"/>
             </connections>
             <point key="canvasLocation" x="229.71014492753625" y="194.19642857142856"/>
