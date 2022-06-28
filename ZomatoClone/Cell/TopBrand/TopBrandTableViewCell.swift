@@ -21,7 +21,6 @@ class TopBrandTableViewCell: UITableViewCell {
             brandCollectionView.reloadData()
         }
     }
-    var isFirstTimeCellShow: Bool = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -107,13 +106,6 @@ extension TopBrandTableViewCell: UICollectionViewDelegateFlowLayout
         
         let collectionWidth = collectionView.bounds.width
         let collectionHeight = collectionView.bounds.height
-        print("CW: \(collectionView.bounds.width)")
-        print("CH: \(collectionView.bounds.height)")
-        
-        if isShowSeeMoreButton ?? false
-        {
-            isFirstTimeCellShow = false
-        }
         
         return CGSize(width: collectionWidth/4.3, height: 147.5)
     }

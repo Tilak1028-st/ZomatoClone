@@ -17,6 +17,7 @@ class DeliveryViewController: UIViewController {
     
     
     var isShowSeeMoreButton: Bool = false
+    var currentLocation: String = "Mumbai"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,10 @@ class DeliveryViewController: UIViewController {
     @IBAction func seeMorePressed(_ sender: UIButton) {
         isShowSeeMoreButton = !isShowSeeMoreButton
         self.productsTableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        leftBarButton.title = currentLocation
     }
    
     
@@ -46,9 +51,7 @@ class DeliveryViewController: UIViewController {
         
         self.productsTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.productsTableView.bounds.size.width, height: dummyViewHeight))
         self.productsTableView.contentInset = UIEdgeInsets(top: -dummyViewHeight, left: 0, bottom: 0, right: 0)
-       // leftBarButton.title = "New York"
         
-       
     }
     
     @IBAction func openMap(_ sender: UIBarButtonItem)
@@ -98,7 +101,7 @@ class DeliveryViewController: UIViewController {
         case .topBrandCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
             cell.isShowSeeMoreButton = self.isShowSeeMoreButton
-     //       cell.seeMoreButton.isHidden = true
+        //    cell.seeMoreButton.isHidden = true
             return cell
         case .quickCheckoutCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.quickCheckoutTableCell, for: indexPath) as! QuickCheckoutTableViewCell

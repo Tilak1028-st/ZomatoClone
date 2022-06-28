@@ -10,6 +10,7 @@ import UIKit
 class LocationSearchViewController: UIViewController {
 
      var navController: UINavigationController?
+    var currentLocation: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

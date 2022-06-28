@@ -88,16 +88,112 @@
                     <view key="view" contentMode="scaleToFill" id="tkj-tM-UeC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cHl-Re-eE9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ymm-is-hoR" id="QO0-9A-HEl"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSh-DS-3J7">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cz-90-qDe">
+                                        <rect key="frame" x="10" y="54" width="394" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="xQ4-7e-FIB"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Confirm Location">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="confirmLocationPressed:" destination="ymm-is-hoR" eventType="touchUpInside" id="9lA-1C-WL4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKd-2A-Bcu">
+                                        <rect key="frame" x="321.5" y="15" width="82.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="CHANGE">
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="chnageLocationPressed:" destination="ymm-is-hoR" eventType="touchUpInside" id="c4O-gV-1Mo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIe-cD-aqn">
+                                        <rect key="frame" x="10" y="15" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cIe-cD-aqn" firstAttribute="top" secondItem="zSh-DS-3J7" secondAttribute="top" constant="15" id="9gB-xX-e2x"/>
+                                    <constraint firstItem="cIe-cD-aqn" firstAttribute="leading" secondItem="zSh-DS-3J7" secondAttribute="leading" constant="10" id="GsF-He-vdl"/>
+                                    <constraint firstItem="FKd-2A-Bcu" firstAttribute="top" secondItem="zSh-DS-3J7" secondAttribute="top" constant="15" id="X1R-gS-LEw"/>
+                                    <constraint firstItem="6Cz-90-qDe" firstAttribute="leading" secondItem="zSh-DS-3J7" secondAttribute="leading" constant="10" id="YUD-8x-nWB"/>
+                                    <constraint firstAttribute="height" constant="100" id="dtl-vv-Ytx"/>
+                                    <constraint firstAttribute="trailing" secondItem="FKd-2A-Bcu" secondAttribute="trailing" constant="10" id="eYn-wH-tV4"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Cz-90-qDe" secondAttribute="bottom" constant="15" id="pxs-AN-igr"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Cz-90-qDe" secondAttribute="trailing" constant="10" id="rQW-Gg-qRd"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ctj-WQ-Reg">
+                                <rect key="frame" x="187" y="427.5" width="40" height="40"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="QI5-k2-tSz"/>
+                                    <constraint firstAttribute="height" constant="40" id="udW-co-74r"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dat-V7-bj6">
+                                <rect key="frame" x="107" y="716" width="200" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1Le-UU-Wuj"/>
+                                    <constraint firstAttribute="height" constant="31" id="7cd-uk-iFl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="location" catalog="system" title="Use Current Location" imagePadding="5">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="12"/>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseBackgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="useCurrentLocationPressed:" destination="ymm-is-hoR" eventType="touchUpInside" id="SkQ-2G-txz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3Le-ZZ-qDg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ctj-WQ-Reg" firstAttribute="centerY" secondItem="tkj-tM-UeC" secondAttribute="centerY" id="A1V-nW-zMD"/>
+                            <constraint firstItem="zSh-DS-3J7" firstAttribute="leading" secondItem="3Le-ZZ-qDg" secondAttribute="leading" id="B3j-cw-gvM"/>
+                            <constraint firstItem="Ctj-WQ-Reg" firstAttribute="centerX" secondItem="tkj-tM-UeC" secondAttribute="centerX" id="BUP-QA-MBV"/>
+                            <constraint firstItem="zSh-DS-3J7" firstAttribute="trailing" secondItem="3Le-ZZ-qDg" secondAttribute="trailing" id="BpT-vF-zaI"/>
+                            <constraint firstItem="zSh-DS-3J7" firstAttribute="top" secondItem="cHl-Re-eE9" secondAttribute="bottom" id="GEO-ax-ucO"/>
+                            <constraint firstItem="cHl-Re-eE9" firstAttribute="trailing" secondItem="3Le-ZZ-qDg" secondAttribute="trailing" id="K47-oH-B2H"/>
+                            <constraint firstItem="cHl-Re-eE9" firstAttribute="top" secondItem="3Le-ZZ-qDg" secondAttribute="top" id="LyT-xD-Uck"/>
+                            <constraint firstItem="zSh-DS-3J7" firstAttribute="top" secondItem="Dat-V7-bj6" secondAttribute="bottom" constant="15" id="Mpc-qA-hYm"/>
+                            <constraint firstItem="3Le-ZZ-qDg" firstAttribute="bottom" secondItem="zSh-DS-3J7" secondAttribute="bottom" id="ebw-k4-nL3"/>
+                            <constraint firstItem="Dat-V7-bj6" firstAttribute="centerX" secondItem="tkj-tM-UeC" secondAttribute="centerX" id="rj4-Vy-gwZ"/>
+                            <constraint firstItem="cHl-Re-eE9" firstAttribute="leading" secondItem="3Le-ZZ-qDg" secondAttribute="leading" id="tTA-UP-Eaw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oMT-kn-tlf">
                         <barButtonItem key="backBarButtonItem" title="Choose Your Location" id="ARe-zU-v5t"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currentLocationLabel" destination="cIe-cD-aqn" id="YZs-BT-zsu"/>
+                        <outlet property="mapView" destination="cHl-Re-eE9" id="hTV-Cf-Pxj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5O1-h8-o8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284" y="1884"/>
+            <point key="canvasLocation" x="-284.05797101449275" y="1883.7053571428571"/>
         </scene>
         <!--Delivery View Controller-->
         <scene sceneID="YYm-XC-fvM">
@@ -337,6 +433,7 @@
         <image name="icons8-wine-glass-50" width="50" height="50"/>
         <image name="lifepreserver" catalog="system" width="128" height="121"/>
         <image name="location" catalog="system" width="128" height="118"/>
+        <image name="mappin" catalog="system" width="105" height="128"/>
         <image name="pin" catalog="system" width="119" height="128"/>
         <image name="scooter" catalog="system" width="128" height="95"/>
         <image name="wallet.pass" catalog="system" width="115" height="128"/>
@@ -348,6 +445,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
