@@ -45,6 +45,10 @@
 		82D66B0828648EF1005E101B /* TopBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66B0628648EF1005E101B /* TopBrandTableViewCell.xib */; };
 		82D66B0C28648F1A005E101B /* QuickCheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66B0A28648F1A005E101B /* QuickCheckoutTableViewCell.swift */; };
 		82D66B0D28648F1A005E101B /* QuickCheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D66B0B28648F1A005E101B /* QuickCheckoutTableViewCell.xib */; };
+		82DAF99F286C7FAF003FB4B9 /* CrazyOfferableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DAF99D286C7FAF003FB4B9 /* CrazyOfferableViewCell.swift */; };
+		82DAF9A0286C7FAF003FB4B9 /* CrazyOfferableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82DAF99E286C7FAF003FB4B9 /* CrazyOfferableViewCell.xib */; };
+		82DAF9A4286C7FED003FB4B9 /* CrazyOfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DAF9A2286C7FED003FB4B9 /* CrazyOfferCollectionViewCell.swift */; };
+		82DAF9A5286C7FED003FB4B9 /* CrazyOfferCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82DAF9A3286C7FED003FB4B9 /* CrazyOfferCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +92,10 @@
 		82D66B0628648EF1005E101B /* TopBrandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopBrandTableViewCell.xib; sourceTree = "<group>"; };
 		82D66B0A28648F1A005E101B /* QuickCheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		82D66B0B28648F1A005E101B /* QuickCheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuickCheckoutTableViewCell.xib; sourceTree = "<group>"; };
+		82DAF99D286C7FAF003FB4B9 /* CrazyOfferableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyOfferableViewCell.swift; sourceTree = "<group>"; };
+		82DAF99E286C7FAF003FB4B9 /* CrazyOfferableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrazyOfferableViewCell.xib; sourceTree = "<group>"; };
+		82DAF9A2286C7FED003FB4B9 /* CrazyOfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyOfferCollectionViewCell.swift; sourceTree = "<group>"; };
+		82DAF9A3286C7FED003FB4B9 /* CrazyOfferCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrazyOfferCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +320,7 @@
 		82D66AF5286483A8005E101B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				82DAF99C286C7F85003FB4B9 /* CrazyOffer */,
 				82983C092865D10200AD71C7 /* Restaurant */,
 				82983BFD2865C83500AD71C7 /* SmallProductCell */,
 				82D66AFB286483F4005E101B /* Product */,
@@ -369,6 +378,25 @@
 				82983BFC28659B7300AD71C7 /* QuickCheckoutItem */,
 			);
 			path = QuickCheckout;
+			sourceTree = "<group>";
+		};
+		82DAF99C286C7F85003FB4B9 /* CrazyOffer */ = {
+			isa = PBXGroup;
+			children = (
+				82DAF99D286C7FAF003FB4B9 /* CrazyOfferableViewCell.swift */,
+				82DAF99E286C7FAF003FB4B9 /* CrazyOfferableViewCell.xib */,
+				82DAF9A1286C7FBC003FB4B9 /* CrazyOfferCollectionView */,
+			);
+			path = CrazyOffer;
+			sourceTree = "<group>";
+		};
+		82DAF9A1286C7FBC003FB4B9 /* CrazyOfferCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				82DAF9A2286C7FED003FB4B9 /* CrazyOfferCollectionViewCell.swift */,
+				82DAF9A3286C7FED003FB4B9 /* CrazyOfferCollectionViewCell.xib */,
+			);
+			path = CrazyOfferCollectionView;
 			sourceTree = "<group>";
 		};
 		82E105DD286B124B0057DAFB /* Model */ = {
@@ -443,9 +471,11 @@
 				82983BF128656DEB00AD71C7 /* ProductCollectionViewCell.xib in Resources */,
 				82983BF62865775A00AD71C7 /* BrandItemCollectionViewCell.xib in Resources */,
 				82D66AD028644AE2005E101B /* Assets.xcassets in Resources */,
+				82DAF9A5286C7FED003FB4B9 /* CrazyOfferCollectionViewCell.xib in Resources */,
 				82D66AFF28648419005E101B /* ProductTableViewCell.xib in Resources */,
 				82D66AF9286483D4005E101B /* FilterCollectionViewCell.xib in Resources */,
 				82983C012865C86300AD71C7 /* SmallProductTableViewCell.xib in Resources */,
+				82DAF9A0286C7FAF003FB4B9 /* CrazyOfferableViewCell.xib in Resources */,
 				82D66B0D28648F1A005E101B /* QuickCheckoutTableViewCell.xib in Resources */,
 				82983BFB28659B6800AD71C7 /* QuickCheckoutItemCollectionViewCell.xib in Resources */,
 				82D66ACE28644ADF005E101B /* Main.storyboard in Resources */,
@@ -475,6 +505,8 @@
 				82983C042865C8A200AD71C7 /* SmallProductCollectionViewCell.swift in Sources */,
 				82D66AC928644ADF005E101B /* SceneDelegate.swift in Sources */,
 				82D66B0C28648F1A005E101B /* QuickCheckoutTableViewCell.swift in Sources */,
+				82DAF99F286C7FAF003FB4B9 /* CrazyOfferableViewCell.swift in Sources */,
+				82DAF9A4286C7FED003FB4B9 /* CrazyOfferCollectionViewCell.swift in Sources */,
 				82D66AFE28648419005E101B /* ProductTableViewCell.swift in Sources */,
 				82983BF52865775A00AD71C7 /* BrandItemCollectionViewCell.swift in Sources */,
 				82983C102865DE0D00AD71C7 /* Utility.swift in Sources */,

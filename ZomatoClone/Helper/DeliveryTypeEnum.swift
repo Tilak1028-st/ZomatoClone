@@ -37,6 +37,15 @@ enum DiningSection: String, CaseIterable
     case discoverResCell = "Discover resturants for"
 }
 
+enum offerSection: String, CaseIterable
+{
+    case offerCell = ""
+    case crazyOfferCell = " "
+    case topDishCell = "Check offers on top dishes"
+    case mostLovedCell = "Most Loved offers on Zomato"
+    case bestOfferCell = "Best Offer around you"
+}
+
 
 enum filterRow: String, CaseIterable
 {
@@ -61,34 +70,9 @@ enum smallProductImage
     static let image5 = UIImage(named: "food5")
 }
 
-enum featuredResturantImage
-{
-    static let image1 = UIImage(named: "food1")
-    static let image2 = UIImage(named: "food6")
-    static let image3 = UIImage(named: "food3")
-    static let image4 = UIImage(named: "food7")
-    static let image5 = UIImage(named: "food2")
-}
 
-enum quickcheckoutImage
-{
-    static let image1 = UIImage(named: "food1")
-    static let image2 = UIImage(named: "food6")
-    static let image3 = UIImage(named: "food3")
-    static let image4 = UIImage(named: "food7")
-    static let image5 = UIImage(named: "food2")
-}
 
-enum recommendedForYouImage
-{
-    static let image1 = UIImage(named: "food1")
-    static let image2 = UIImage(named: "food6")
-    static let image3 = UIImage(named: "food3")
-    static let image4 = UIImage(named: "food7")
-    static let image5 = UIImage(named: "food2")
-}
 
-enum tableCellImage
-{
-    
-}
+
+
+

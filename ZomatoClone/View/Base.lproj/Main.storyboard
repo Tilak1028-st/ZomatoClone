@@ -368,14 +368,61 @@
                     <view key="view" contentMode="scaleToFill" id="M2S-fE-YgV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="s2F-LB-JWB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dsM-y5-OWF">
+                                <rect key="frame" x="0.0" y="139" width="414" height="674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="w51-iW-GKi" id="guW-Sy-FG1"/>
+                                    <outlet property="delegate" destination="w51-iW-GKi" id="HsR-Rw-pC6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UMl-O7-9QT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s2F-LB-JWB" firstAttribute="trailing" secondItem="UMl-O7-9QT" secondAttribute="trailing" id="5tg-ao-D3M"/>
+                            <constraint firstItem="dsM-y5-OWF" firstAttribute="top" secondItem="s2F-LB-JWB" secondAttribute="bottom" id="AIt-Ee-zV4"/>
+                            <constraint firstItem="dsM-y5-OWF" firstAttribute="top" secondItem="s2F-LB-JWB" secondAttribute="bottom" id="HrM-R9-OCX"/>
+                            <constraint firstItem="dsM-y5-OWF" firstAttribute="leading" secondItem="UMl-O7-9QT" secondAttribute="leading" id="NIu-NC-bAM"/>
+                            <constraint firstItem="dsM-y5-OWF" firstAttribute="bottom" secondItem="UMl-O7-9QT" secondAttribute="bottom" id="O0U-ZW-R0e"/>
+                            <constraint firstItem="s2F-LB-JWB" firstAttribute="leading" secondItem="UMl-O7-9QT" secondAttribute="leading" id="TEz-k7-qWS"/>
+                            <constraint firstItem="s2F-LB-JWB" firstAttribute="top" secondItem="UMl-O7-9QT" secondAttribute="top" id="cqx-G0-SlG"/>
+                            <constraint firstItem="dsM-y5-OWF" firstAttribute="trailing" secondItem="UMl-O7-9QT" secondAttribute="trailing" id="hD3-jV-az0"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PNz-7C-ozm"/>
+                    <navigationItem key="navigationItem" id="PNz-7C-ozm">
+                        <leftBarButtonItems>
+                            <barButtonItem image="pin" catalog="system" id="H9m-bh-q50">
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="openMap:" destination="w51-iW-GKi" id="R7o-pv-vHg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Mumbai" id="Ieq-0g-x8z">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="openMap:" destination="w51-iW-GKi" id="GaC-D6-aPx"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" image="icons8-wine-glass-50" id="KPf-Ux-BQs">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="leftBarButton" destination="Ieq-0g-x8z" id="wYl-qG-Odd"/>
+                        <outlet property="offerSearchBar" destination="s2F-LB-JWB" id="EhB-sE-fYz"/>
+                        <outlet property="offerTableView" destination="dsM-y5-OWF" id="N2q-1r-cE7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLv-a4-9GB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370" y="1211"/>
+            <point key="canvasLocation" x="369.56521739130437" y="1210.0446428571429"/>
         </scene>
         <!--Money View Controller-->
         <scene sceneID="8CI-Bq-0SX">

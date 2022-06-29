@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CrazyOfferCollectionViewCell" customModule="ZomatoClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="204" height="211"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="204" height="211"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-qP-Vdo">
+                        <rect key="frame" x="0.0" y="0.0" width="204" height="211"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger1" translatesAutoresizingMaskIntoConstraints="NO" id="Jqv-2G-lw3">
+                                <rect key="frame" x="0.0" y="0.0" width="204" height="158.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYR-dO-Mr4">
+                                <rect key="frame" x="0.0" y="158.5" width="204" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdL-R4-04P">
+                                <rect key="frame" x="0.0" y="190.5" width="204" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XYR-dO-Mr4" firstAttribute="leading" secondItem="fMe-qP-Vdo" secondAttribute="leading" id="0xL-54-RSq"/>
+                            <constraint firstItem="XdL-R4-04P" firstAttribute="top" secondItem="XYR-dO-Mr4" secondAttribute="bottom" id="43D-Sz-sBd"/>
+                            <constraint firstAttribute="bottom" secondItem="XdL-R4-04P" secondAttribute="bottom" id="9SF-zK-1fh"/>
+                            <constraint firstAttribute="trailing" secondItem="XYR-dO-Mr4" secondAttribute="trailing" id="Aox-0f-saK"/>
+                            <constraint firstItem="XYR-dO-Mr4" firstAttribute="top" secondItem="Jqv-2G-lw3" secondAttribute="bottom" id="BVj-8T-U5M"/>
+                            <constraint firstAttribute="trailing" secondItem="XdL-R4-04P" secondAttribute="trailing" id="Jve-EM-zVD"/>
+                            <constraint firstItem="Jqv-2G-lw3" firstAttribute="height" secondItem="fMe-qP-Vdo" secondAttribute="height" multiplier="0.75" id="RRP-5x-lKK"/>
+                            <constraint firstItem="Jqv-2G-lw3" firstAttribute="leading" secondItem="fMe-qP-Vdo" secondAttribute="leading" id="Ry3-Mz-cO3"/>
+                            <constraint firstItem="XdL-R4-04P" firstAttribute="leading" secondItem="fMe-qP-Vdo" secondAttribute="leading" id="cRv-5n-kn9"/>
+                            <constraint firstItem="Jqv-2G-lw3" firstAttribute="width" secondItem="fMe-qP-Vdo" secondAttribute="width" id="hSp-zM-SzO"/>
+                            <constraint firstItem="XdL-R4-04P" firstAttribute="top" secondItem="XYR-dO-Mr4" secondAttribute="bottom" id="rfx-W3-SFq"/>
+                            <constraint firstAttribute="trailing" secondItem="Jqv-2G-lw3" secondAttribute="trailing" id="sTy-Cj-gDI"/>
+                            <constraint firstItem="Jqv-2G-lw3" firstAttribute="top" secondItem="fMe-qP-Vdo" secondAttribute="top" id="wGf-Ku-etx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="fMe-qP-Vdo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4n0-Yr-0Ih"/>
+                <constraint firstItem="fMe-qP-Vdo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PcK-pY-mKj"/>
+                <constraint firstAttribute="bottom" secondItem="fMe-qP-Vdo" secondAttribute="bottom" id="eXO-nZ-lCl"/>
+                <constraint firstAttribute="trailing" secondItem="fMe-qP-Vdo" secondAttribute="trailing" id="hqL-Ts-6hM"/>
+            </constraints>
+            <size key="customSize" width="204" height="211"/>
+            <connections>
+                <outlet property="brandNameLabel" destination="XYR-dO-Mr4" id="66f-SS-bzo"/>
+                <outlet property="offerLabel" destination="XdL-R4-04P" id="LIv-N7-3yy"/>
+                <outlet property="productImageView" destination="Jqv-2G-lw3" id="MdY-mX-So3"/>
+            </connections>
+            <point key="canvasLocation" x="243.47826086956525" y="163.72767857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="burger1" width="2000" height="1334"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

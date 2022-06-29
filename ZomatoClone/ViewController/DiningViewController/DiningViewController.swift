@@ -242,6 +242,7 @@ extension DiningViewController
         arrayTopBrand.append(TopBrand.init(brandName: "Family Dining", brandImage: UIImage(named: "dining")!))
         arrayTopBrand.append(TopBrand.init(brandName: "Buffet", brandImage: UIImage(named: "buffet")!))
         arrayTopBrand.append(TopBrand.init(brandName: "Desserts", brandImage: UIImage(named: "desert")!))
+        
         arrayTopBrand.append(TopBrand.init(brandName: "Outdoor", brandImage: UIImage(named: "outdoor")!))
         arrayTopBrand.append(TopBrand.init(brandName: "Romantic", brandImage: UIImage(named: "romantic")!))
         arrayTopBrand.append(TopBrand.init(brandName: "Cafe", brandImage: UIImage(named: "cafe")!))
@@ -260,6 +261,7 @@ extension DiningViewController
         arrDiningProduct.append(TopBrand.init(brandName: "Family Dining", brandImage: UIImage(named: "dining")!))
         arrDiningProduct.append(TopBrand.init(brandName: "Buffet", brandImage: UIImage(named: "buffet")!))
         arrDiningProduct.append(TopBrand.init(brandName: "Desserts", brandImage: UIImage(named: "desert")!))
+        
         arrDiningProduct.append(TopBrand.init(brandName: "Healthy", brandImage: UIImage(named: "healthy-1")!))
         arrDiningProduct.append(TopBrand.init(brandName: "Pure Veg", brandImage: UIImage(named: "veg")!))
         arrDiningProduct.append(TopBrand.init(brandName: "Kid Friendly", brandImage: UIImage(named: "kid")!))
