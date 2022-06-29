@@ -273,7 +273,7 @@
                         <outlet property="leftBarButton" destination="4jV-wg-vKc" id="mqh-SC-9Xa"/>
                         <outlet property="productsTableView" destination="3EB-UN-Unk" id="StB-lS-JRC"/>
                         <outlet property="rightBarButton" destination="OVK-Je-0MJ" id="oo4-53-f0W"/>
-                        <outlet property="searchBar" destination="Xjy-u7-egg" id="UnA-vE-mRB"/>
+                        <outlet property="searchBar" destination="Xjy-u7-egg" id="ztn-gZ-oOv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZS-AA-8GY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -352,6 +352,9 @@
                     <connections>
                         <outlet property="diningFilterCollectionView" destination="HJ0-KX-IFh" id="yKL-9w-tJg"/>
                         <outlet property="diningProductTableView" destination="awW-kC-UcC" id="3PX-MQ-u7t"/>
+                        <outlet property="leftBarButton" destination="g1n-6u-SBS" id="4sF-0c-Trl"/>
+                        <outlet property="rightBarButton" destination="fas-lc-4hT" id="5Iy-wR-zcB"/>
+                        <outlet property="searchBar" destination="aZe-kZ-G6p" id="evu-Hy-1LC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfm-0M-btH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

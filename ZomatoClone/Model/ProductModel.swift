@@ -28,3 +28,15 @@ class Product
     }
 }
 
+
+class TopBrand
+{
+    var brandName: String
+    var brandImage: UIImage
+    
+    init(brandName: String, brandImage: UIImage)
+    {
+        self.brandImage = brandImage
+        self.brandName = brandName
+    }
+}
