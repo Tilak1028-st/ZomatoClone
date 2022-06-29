@@ -15,7 +15,7 @@ class DeliveryViewController: UIViewController {
     @IBOutlet weak var rightBarButton: UIBarButtonItem!
     @IBOutlet weak var leftBarButton: UIBarButtonItem!
     
-   
+    
     
     var isShowSeeMoreButton: Bool = false
     var currentLocation: String = "Mumbai"
@@ -46,9 +46,9 @@ class DeliveryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         leftBarButton.title = currentLocation
     }
-   
     
-//MARK:  - SetUpView
+    
+    //MARK:  - SetUpView
     
     private func setUpview()
     {
@@ -69,7 +69,7 @@ class DeliveryViewController: UIViewController {
         productsTableView.reloadData()
     }
     
-// MARK: SetUpSearchBar
+    // MARK: SetUpSearchBar
     private func setUpSearchBar()
     {
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
@@ -133,7 +133,7 @@ class DeliveryViewController: UIViewController {
             cell.imageWidth = 2
             cell.isShowSeeMoreButton = self.isShowSeeMoreButton
             cell.productArray = arrayTopBrand
-        //    cell.seeMoreButton.isHidden = true
+            //    cell.seeMoreButton.isHidden = true
             return cell
         case .quickCheckoutCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.quickCheckoutTableCell, for: indexPath) as! QuickCheckoutTableViewCell
@@ -193,7 +193,7 @@ class DeliveryViewController: UIViewController {
         case .restaurantsCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.restaurantCell, for: indexPath) as! RestaurantableViewCell
             cell.cellView.layer.borderWidth = 0.5
-           // cell.cellView.layer.masksToBounds = false
+            // cell.cellView.layer.masksToBounds = false
             cell.cellView.layer.borderColor = UIColor.gray.cgColor
             cell.cellView.layer.cornerRadius = 12
             cell.cellView.layer.shadowRadius = 5
@@ -322,7 +322,7 @@ extension DeliveryViewController {
         arrayAmazingSnacksProducts.append(Product.init(productName: "Jay Bhavani", productDiscount: 55, productRating: "4", productImage: UIImage(named: "snacks4")!, productDeliveryTime: 35, productPrice: "175 for one"))
         arrayAmazingSnacksProducts.append(Product.init(productName: "City corner", productDiscount: 66, productRating: "4", productImage: UIImage(named: "snacks5")!, productDeliveryTime: 45, productPrice: "200 for one"))
         
-       //delicious
+        //delicious
         arrDeliciousProducts.append(Product.init(productName: "Puffizza", productDiscount: 40, productRating: "3", productImage: UIImage(named: "delicious1")!, productDeliveryTime: 32, productPrice: "125 for one"))
         arrDeliciousProducts.append(Product.init(productName: "Cake Live", productDiscount: 50, productRating: "4", productImage: UIImage(named: "delicious2")!, productDeliveryTime: 40, productPrice: "100 for one"))
         arrDeliciousProducts.append(Product.init(productName: "Honest", productDiscount: 40, productRating: "3", productImage: UIImage(named: "delicious3")!, productDeliveryTime: 23, productPrice: "150 for one"))
@@ -363,22 +363,22 @@ extension DeliveryViewController {
         arrayTopBrand.append(TopBrand.init(brandName: "Kwality Wall's", brandImage: UIImage(named: "kwality")!))
         arrayTopBrand.append(TopBrand.init(brandName: "Live Cake Bakery", brandImage: UIImage(named: "cake")!))
         
-        arrayEatHappy.append(TopBrand.init(brandName: "Healthy", brandImage: UIImage(named: "la pino'z")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Pizza", brandImage: UIImage(named: "mcd")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Thali", brandImage: UIImage(named: "jaybhavani")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Chaat", brandImage: UIImage(named: "subwy")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Briyani", brandImage: UIImage(named: "sankalp")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Sandwich", brandImage: UIImage(named: "vipul")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Home Style", brandImage: UIImage(named: "kwality")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Burger", brandImage: UIImage(named: "cake")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Healthy", brandImage: UIImage(named: "Healthy")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Pizza", brandImage: UIImage(named: "pizza")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Thali", brandImage: UIImage(named: "thali")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Chaat", brandImage: UIImage(named: "chaat")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Briyani", brandImage: UIImage(named: "briyani")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Sandwich", brandImage: UIImage(named: "sandwich")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Home Style", brandImage: UIImage(named: "home food")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Burger", brandImage: UIImage(named: "burger1")!))
         
-        arrayEatHappy.append(TopBrand.init(brandName: "Chicken", brandImage: UIImage(named: "la pino'z")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Fries", brandImage: UIImage(named: "mcd")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Vada", brandImage: UIImage(named: "jaybhavani")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Pratha", brandImage: UIImage(named: "subwy")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Chhaach", brandImage: UIImage(named: "sankalp")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Dosa", brandImage: UIImage(named: "vipul")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Dal", brandImage: UIImage(named: "kwality")!))
-        arrayEatHappy.append(TopBrand.init(brandName: "Samosa", brandImage: UIImage(named: "cake")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Chicken", brandImage: UIImage(named: "chicken")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Fries", brandImage: UIImage(named: "fries")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Vada", brandImage: UIImage(named: "vada")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Pratha", brandImage: UIImage(named: "pratha")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Chhaach", brandImage: UIImage(named: "chaach")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Dosa", brandImage: UIImage(named: "dosa")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Dal", brandImage: UIImage(named: "dal")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Samosa", brandImage: UIImage(named: "samosa")!))
     }
 }

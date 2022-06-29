@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-1X-aOr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                        <rect key="frame" x="10" y="0.0" width="300" height="230"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-sO-gxk">
-                                <rect key="frame" x="10" y="0.0" width="300" height="195"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="195"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="TOe-U4-or5">
                                     <size key="itemSize" width="128" height="128"/>
@@ -36,7 +36,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJh-si-A1c">
-                                <rect key="frame" x="10" y="200" width="300" height="30"/>
+                                <rect key="frame" x="0.0" y="200" width="300" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="see more" imagePadding="5" titleAlignment="automatic">
                                     <imageReference key="image" image="chevron.down" catalog="system" symbolScale="small"/>
@@ -47,19 +47,20 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="dJh-si-A1c" firstAttribute="leading" secondItem="rxz-1X-aOr" secondAttribute="leading" constant="10" id="58e-2L-l9e"/>
-                            <constraint firstItem="mX8-sO-gxk" firstAttribute="leading" secondItem="rxz-1X-aOr" secondAttribute="leading" constant="10" id="FaM-TE-4Iw"/>
+                            <constraint firstItem="dJh-si-A1c" firstAttribute="leading" secondItem="rxz-1X-aOr" secondAttribute="leading" id="0Fr-1D-mdy"/>
+                            <constraint firstItem="mX8-sO-gxk" firstAttribute="leading" secondItem="rxz-1X-aOr" secondAttribute="leading" id="FaM-TE-4Iw"/>
                             <constraint firstItem="dJh-si-A1c" firstAttribute="top" secondItem="mX8-sO-gxk" secondAttribute="bottom" constant="5" id="JS9-zH-Wmt"/>
-                            <constraint firstAttribute="trailing" secondItem="mX8-sO-gxk" secondAttribute="trailing" constant="10" id="fpW-v2-hUc"/>
-                            <constraint firstAttribute="trailing" secondItem="dJh-si-A1c" secondAttribute="trailing" constant="10" id="iF9-ew-dZ7"/>
+                            <constraint firstAttribute="bottom" secondItem="dJh-si-A1c" secondAttribute="bottom" id="Upn-LM-5bd"/>
+                            <constraint firstAttribute="trailing" secondItem="dJh-si-A1c" secondAttribute="trailing" id="aco-tc-Xoh"/>
+                            <constraint firstAttribute="trailing" secondItem="mX8-sO-gxk" secondAttribute="trailing" id="fpW-v2-hUc"/>
                             <constraint firstItem="mX8-sO-gxk" firstAttribute="top" secondItem="rxz-1X-aOr" secondAttribute="top" id="wV5-R7-Ntd"/>
                         </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="rxz-1X-aOr" secondAttribute="trailing" id="2Wj-nl-Mll"/>
+                    <constraint firstAttribute="trailing" secondItem="rxz-1X-aOr" secondAttribute="trailing" constant="10" id="2Wj-nl-Mll"/>
                     <constraint firstAttribute="bottom" secondItem="rxz-1X-aOr" secondAttribute="bottom" id="IsI-Jq-y7q"/>
-                    <constraint firstItem="rxz-1X-aOr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TzE-AR-OJ9"/>
+                    <constraint firstItem="rxz-1X-aOr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="TzE-AR-OJ9"/>
                     <constraint firstItem="rxz-1X-aOr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gk8-HB-m7a"/>
                 </constraints>
             </tableViewCellContentView>

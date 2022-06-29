@@ -18,10 +18,14 @@ class DiningViewController: UIViewController {
     var isShowSeeMoreButton: Bool = false
     var currentLocation: String = "Mumbai"
     
+    var arrayTopBrand = [TopBrand]()
+    var arrDiningProduct = [TopBrand]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
         setUpSearchBar()
+        setDiningProductDetails()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -153,7 +157,7 @@ extension DiningViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 || section == 3 || section == 4 {
-            return 0
+            return 5
         }
         else
         {
@@ -173,22 +177,16 @@ extension DiningViewController
         
         switch section
         {
-            
         case .brandCell:
             let cell = diningProductTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
-            cell.imageWidth = 5
             cell.isShowTime = true
+            cell.productArray = arrDiningProduct
+            cell.imageWidth = 5
             cell.seeMoreButton.addTarget(self, action: #selector(seeMorePressed(_:)), for: .touchUpInside)
             cell.isShowSeeMoreButton = self.isShowSeeMoreButton
             cell.brandCollectionView.reloadData()
             return cell
-        case .curatedCell:
-            let cell = diningProductTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
-            cell.isShowSeeMoreButton = self.isShowSeeMoreButton
-            cell.imageWidth = 5
-            cell.isShowTime = true
-            return cell
-        case .popularcell,.popularagaincell, .popularRepeatCell:
+        case .curatedCell, .popularcell, .popularagaincell, .popularRepeatCell:
             let cell = diningProductTableView.dequeueReusableCell(withIdentifier: StringConstant.restaurantCell, for: indexPath) as! RestaurantableViewCell
             cell.cellView.layer.borderWidth = 0.5
             cell.cellView.layer.borderColor = UIColor.gray.cgColor
@@ -200,16 +198,11 @@ extension DiningViewController
             cell.productImageView.layer.cornerRadius = 12
             return cell
         case .discoverResCell:
-            let cell = diningProductTableView.dequeueReusableCell(withIdentifier: StringConstant.restaurantCell, for: indexPath) as! RestaurantableViewCell
-            cell.cellView.layer.borderWidth = 0.5
-           // cell.cellView.layer.masksToBounds = false
-            cell.cellView.layer.borderColor = UIColor.gray.cgColor
-            cell.cellView.layer.cornerRadius = 12
-            cell.cellView.layer.shadowRadius = 5
-            cell.cellView.layer.shadowColor = UIColor.gray.cgColor
-            cell.cellView.layer.shadowOpacity = 0.7
-            cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 5)
-            cell.productImageView.layer.cornerRadius = 12
+            let cell = diningProductTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
+            cell.productArray = arrayTopBrand
+            cell.isShowSeeMoreButton = self.isShowSeeMoreButton
+            cell.imageWidth = 5
+            cell.isShowTime = true
             return cell
         }
     }
@@ -234,4 +227,48 @@ extension DiningViewController
         label.text = DiningSection.allCases[section].rawValue
         return headerView
     }
+}
+
+
+extension DiningViewController
+{
+    func setDiningProductDetails()
+    {
+        arrayTopBrand.append(TopBrand.init(brandName: "Outdoor", brandImage: UIImage(named: "outdoor")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Romantic", brandImage: UIImage(named: "romantic")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Cafe", brandImage: UIImage(named: "cafe")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Events", brandImage: UIImage(named: "events")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Serves Jain food", brandImage: UIImage(named: "jain")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Family Dining", brandImage: UIImage(named: "dining")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Buffet", brandImage: UIImage(named: "buffet")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Desserts", brandImage: UIImage(named: "desert")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Outdoor", brandImage: UIImage(named: "outdoor")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Romantic", brandImage: UIImage(named: "romantic")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Cafe", brandImage: UIImage(named: "cafe")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Events", brandImage: UIImage(named: "events")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Serves Jain food", brandImage: UIImage(named: "jain")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Family Dining", brandImage: UIImage(named: "dining")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Buffet", brandImage: UIImage(named: "buffet")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Desserts", brandImage: UIImage(named: "desert")!))
+        
+        
+        arrDiningProduct.append(TopBrand.init(brandName: "Outdoor", brandImage: UIImage(named: "outdoor")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Romantic", brandImage: UIImage(named: "romantic")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Cafe", brandImage: UIImage(named: "cafe")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Events", brandImage: UIImage(named: "events")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Serves Jain food", brandImage: UIImage(named: "jain")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Family Dining", brandImage: UIImage(named: "dining")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Buffet", brandImage: UIImage(named: "buffet")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Desserts", brandImage: UIImage(named: "desert")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Healthy", brandImage: UIImage(named: "healthy-1")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Pure Veg", brandImage: UIImage(named: "veg")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Kid Friendly", brandImage: UIImage(named: "kid")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Breakfast", brandImage: UIImage(named: "breakfast")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Snacks", brandImage: UIImage(named: "snacks")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Wifi", brandImage: UIImage(named: "wifi")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Brunch", brandImage: UIImage(named: "breakfast")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Self Service", brandImage: UIImage(named: "self")!))
+        
+    }
+    
 }

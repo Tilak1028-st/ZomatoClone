@@ -55,7 +55,7 @@ extension TopBrandTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         if isShowSeeMoreButton ?? false
         {
             seeMoreButton.setTitle("see less", for: .normal)
-            return 8
+            return itemEnum.allCases.count
         }
         else
         {
@@ -67,8 +67,7 @@ extension TopBrandTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let item = brandCollectionView.dequeueReusableCell(withReuseIdentifier: StringConstant.brandItemCollectionCell, for: indexPath) as! BrandItemCollectionViewCell
-        let row = brandName.allCases[indexPath.item]
-        
+
         item.imageWidth = self.imageWidth ?? 0.0
         if isShowTime
         {
@@ -79,33 +78,6 @@ extension TopBrandTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
             item.timmerView.isHidden = false
         }
         item.brandArray = self.productArray?[indexPath.item]
-        
-//        switch row {
-//        case .loPizza:
-//            item.brandNameLabel.text = row.rawValue
-//            item.brandImageView.image = UIImage(named: "la pino'z")
-//        case .mcDonald:
-//            item.brandNameLabel.text = row.rawValue
-//            item.brandImageView.image = UIImage(named: "mcd")
-//        case .jayBhavani:
-//            item.brandNameLabel.text = row.rawValue
-//            item.brandImageView.image = UIImage(named: "jaybhavani")
-//        case .subway:
-//            item.brandNameLabel.text = row.rawValue
-//            item.brandImageView.image = UIImage(named: "subwy")
-//        case .sankalp:
-//            item.brandNameLabel.text = row.rawValue
-//            item.brandImageView.image = UIImage(named: "sankalp")
-//        case .Vipul:
-//            item.brandNameLabel.text = row.rawValue
-//            item.brandImageView.image = UIImage(named: "vipul")
-//        case .kwality:
-//            item.brandNameLabel.text = row.rawValue
-//            item.brandImageView.image = UIImage(named: "kwality")
-//        case .livecake:
-//            item.brandNameLabel.text = row.rawValue
-//            item.brandImageView.image = UIImage(named: "cake")
-//        }
         return item
     }
 }
@@ -120,7 +92,7 @@ extension TopBrandTableViewCell: UICollectionViewDelegateFlowLayout
         let collectionWidth = collectionView.bounds.width
         let collectionHeight = collectionView.bounds.height
         
-        return CGSize(width: collectionWidth/4.3, height: 147.5)
+        return CGSize(width: collectionWidth/4.5, height: 147.5)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat
@@ -141,10 +113,30 @@ enum brandName: String, CaseIterable
 {
     case loPizza = "La Pino'z Pizza"
     case mcDonald = "McDonald's"
-    case jayBhavani = " Jay Bhavani"
+    case jayBhavani = "Jay Bhavani"
     case subway = "Subway"
     case sankalp = "Sankalp"
     case Vipul = "Vipul Dudhiya"
     case kwality = "Kwality Wall's"
     case livecake = "Live Cake Bakery"
+}
+
+enum itemEnum: Int, CaseIterable
+{
+    case loPizza = 1
+    case mcDonald = 2
+    case jayBhavani = 3
+    case subway = 4
+    case sankalp = 5
+    case Vipul = 6
+    case kwality = 7
+    case livecake = 8
+    case loPizza1 = 9
+    case mcDonald1 = 10
+    case jayBhavani1 = 11
+    case subway1 = 12
+    case sankalp1 = 13
+    case Vipul1 = 14
+    case kwality1 = 15
+    case livecake1 = 16
 }
