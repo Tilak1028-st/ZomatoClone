@@ -287,14 +287,76 @@
                     <view key="view" contentMode="scaleToFill" id="O9f-xr-uwj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search &quot;pizza&quot;" translatesAutoresizingMaskIntoConstraints="NO" id="aZe-kZ-G6p">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HJ0-KX-IFh">
+                                <rect key="frame" x="0.0" y="139" width="414" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="jY2-VC-shh"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iUX-xc-je0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Iaq-LH-3zc" id="sKc-eN-DlY"/>
+                                    <outlet property="delegate" destination="Iaq-LH-3zc" id="pCQ-hI-j5L"/>
+                                </connections>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="awW-kC-UcC">
+                                <rect key="frame" x="0.0" y="184" width="414" height="580"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Iaq-LH-3zc" id="ea5-8V-ADx"/>
+                                    <outlet property="delegate" destination="Iaq-LH-3zc" id="SPo-Ua-lsC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uGI-Ko-Swt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aZe-kZ-G6p" firstAttribute="leading" secondItem="uGI-Ko-Swt" secondAttribute="leading" id="4q9-21-fog"/>
+                            <constraint firstItem="HJ0-KX-IFh" firstAttribute="trailing" secondItem="uGI-Ko-Swt" secondAttribute="trailing" id="BWM-XN-oo3"/>
+                            <constraint firstItem="awW-kC-UcC" firstAttribute="bottom" secondItem="uGI-Ko-Swt" secondAttribute="bottom" id="SSv-xG-yvv"/>
+                            <constraint firstItem="awW-kC-UcC" firstAttribute="leading" secondItem="uGI-Ko-Swt" secondAttribute="leading" id="W10-9o-g5Y"/>
+                            <constraint firstItem="HJ0-KX-IFh" firstAttribute="top" secondItem="aZe-kZ-G6p" secondAttribute="bottom" id="bt2-lI-gF2"/>
+                            <constraint firstItem="aZe-kZ-G6p" firstAttribute="top" secondItem="uGI-Ko-Swt" secondAttribute="top" id="eou-uh-VtL"/>
+                            <constraint firstItem="awW-kC-UcC" firstAttribute="top" secondItem="HJ0-KX-IFh" secondAttribute="bottom" id="fkv-sb-DJK"/>
+                            <constraint firstItem="awW-kC-UcC" firstAttribute="trailing" secondItem="uGI-Ko-Swt" secondAttribute="trailing" id="khq-Wi-3k8"/>
+                            <constraint firstItem="aZe-kZ-G6p" firstAttribute="trailing" secondItem="uGI-Ko-Swt" secondAttribute="trailing" id="qjg-2t-UMV"/>
+                            <constraint firstItem="HJ0-KX-IFh" firstAttribute="leading" secondItem="uGI-Ko-Swt" secondAttribute="leading" id="sRc-q7-y1J"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wvh-F3-RKZ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="UiM-XU-THZ">
+                        <leftBarButtonItems>
+                            <barButtonItem image="pin" catalog="system" id="8ez-gm-uPn">
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                            </barButtonItem>
+                            <barButtonItem title="New york" id="g1n-6u-SBS">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" image="icons8-wine-glass-50" id="fas-lc-4hT">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="diningFilterCollectionView" destination="HJ0-KX-IFh" id="yKL-9w-tJg"/>
+                        <outlet property="diningProductTableView" destination="awW-kC-UcC" id="3PX-MQ-u7t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfm-0M-btH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284" y="1211"/>
+            <point key="canvasLocation" x="-284.05797101449275" y="1210.0446428571429"/>
         </scene>
         <!--Offers View Controller-->
         <scene sceneID="2Qo-Hz-C6T">

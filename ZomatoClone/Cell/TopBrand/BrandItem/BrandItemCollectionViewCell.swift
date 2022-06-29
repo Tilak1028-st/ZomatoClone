@@ -21,5 +21,4 @@ class BrandItemCollectionViewCell: UICollectionViewCell {
             self.brandImageView.layer.cornerRadius = self.brandImageView.frame.size.width/2
         }
     }
-
 }
