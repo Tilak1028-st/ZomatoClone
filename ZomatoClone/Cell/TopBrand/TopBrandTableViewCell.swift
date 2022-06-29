@@ -21,6 +21,9 @@ class TopBrandTableViewCell: UITableViewCell {
             brandCollectionView.reloadData()
         }
     }
+    var productArray: [TopBrand]?
+    var imageWidth: CGFloat?
+    var isShowTime: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -66,33 +69,43 @@ extension TopBrandTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         let item = brandCollectionView.dequeueReusableCell(withReuseIdentifier: StringConstant.brandItemCollectionCell, for: indexPath) as! BrandItemCollectionViewCell
         let row = brandName.allCases[indexPath.item]
         
-        switch row {
-            
-        case .loPizza:
-            item.brandNameLabel.text = row.rawValue
-            item.brandImageView.image = UIImage(named: "la pino'z")
-        case .mcDonald:
-            item.brandNameLabel.text = row.rawValue
-            item.brandImageView.image = UIImage(named: "mcd")
-        case .jayBhavani:
-            item.brandNameLabel.text = row.rawValue
-            item.brandImageView.image = UIImage(named: "jaybhavani")
-        case .subway:
-            item.brandNameLabel.text = row.rawValue
-            item.brandImageView.image = UIImage(named: "subwy")
-        case .sankalp:
-            item.brandNameLabel.text = row.rawValue
-            item.brandImageView.image = UIImage(named: "sankalp")
-        case .Vipul:
-            item.brandNameLabel.text = row.rawValue
-            item.brandImageView.image = UIImage(named: "vipul")
-        case .kwality:
-            item.brandNameLabel.text = row.rawValue
-            item.brandImageView.image = UIImage(named: "kwality")
-        case .livecake:
-            item.brandNameLabel.text = row.rawValue
-            item.brandImageView.image = UIImage(named: "cake")
+        item.imageWidth = self.imageWidth ?? 0.0
+        if isShowTime
+        {
+            item.timmerView.isHidden = true
         }
+        else
+        {
+            item.timmerView.isHidden = false
+        }
+        item.brandArray = self.productArray?[indexPath.item]
+        
+//        switch row {
+//        case .loPizza:
+//            item.brandNameLabel.text = row.rawValue
+//            item.brandImageView.image = UIImage(named: "la pino'z")
+//        case .mcDonald:
+//            item.brandNameLabel.text = row.rawValue
+//            item.brandImageView.image = UIImage(named: "mcd")
+//        case .jayBhavani:
+//            item.brandNameLabel.text = row.rawValue
+//            item.brandImageView.image = UIImage(named: "jaybhavani")
+//        case .subway:
+//            item.brandNameLabel.text = row.rawValue
+//            item.brandImageView.image = UIImage(named: "subwy")
+//        case .sankalp:
+//            item.brandNameLabel.text = row.rawValue
+//            item.brandImageView.image = UIImage(named: "sankalp")
+//        case .Vipul:
+//            item.brandNameLabel.text = row.rawValue
+//            item.brandImageView.image = UIImage(named: "vipul")
+//        case .kwality:
+//            item.brandNameLabel.text = row.rawValue
+//            item.brandImageView.image = UIImage(named: "kwality")
+//        case .livecake:
+//            item.brandNameLabel.text = row.rawValue
+//            item.brandImageView.image = UIImage(named: "cake")
+//        }
         return item
     }
 }

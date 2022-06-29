@@ -15,6 +15,7 @@ class DeliveryViewController: UIViewController {
     @IBOutlet weak var rightBarButton: UIBarButtonItem!
     @IBOutlet weak var leftBarButton: UIBarButtonItem!
     
+   
     
     var isShowSeeMoreButton: Bool = false
     var currentLocation: String = "Mumbai"
@@ -27,10 +28,14 @@ class DeliveryViewController: UIViewController {
     var arrSweetsProducts = [Product]()
     var arrDesertProducts = [Product]()
     
+    var arrayTopBrand = [TopBrand]()
+    var arrayEatHappy = [TopBrand]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpview()
         setUpProductDetails()
+        setUpSearchBar()
     }
     
     @IBAction func seeMorePressed(_ sender: UIButton) {
@@ -62,6 +67,21 @@ class DeliveryViewController: UIViewController {
         self.productsTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.productsTableView.bounds.size.width, height: dummyViewHeight))
         self.productsTableView.contentInset = UIEdgeInsets(top: -dummyViewHeight, left: 0, bottom: 0, right: 0)
         productsTableView.reloadData()
+    }
+    
+// MARK: SetUpSearchBar
+    private func setUpSearchBar()
+    {
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            if let leftView = textfield.leftView as? UIImageView {
+                leftView.image = leftView.image?.withRenderingMode(.alwaysTemplate)
+                leftView.tintColor = UIColor.red
+            }
+        }
+        searchBar.searchTextField.attributedPlaceholder = NSAttributedString(
+            string: "Search icecream",
+            attributes: [.foregroundColor: UIColor.red]
+        )
     }
     
     @IBAction func openMap(_ sender: UIBarButtonItem)
@@ -110,7 +130,9 @@ class DeliveryViewController: UIViewController {
             
         case .topBrandCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
+            cell.imageWidth = 2
             cell.isShowSeeMoreButton = self.isShowSeeMoreButton
+            cell.productArray = arrayTopBrand
         //    cell.seeMoreButton.isHidden = true
             return cell
         case .quickCheckoutCell:
@@ -118,8 +140,11 @@ class DeliveryViewController: UIViewController {
             return cell
         case .eatHappyCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
+            cell.isShowTime = true
+            cell.productArray = arrayEatHappy
             cell.seeMoreButton.addTarget(self, action: #selector(seeMorePressed(_:)), for: .touchUpInside)
             cell.isShowSeeMoreButton = isShowSeeMoreButton
+            cell.imageWidth = 2
             cell.brandCollectionView.reloadData()
             return cell
         case .recommendedCell:
@@ -269,7 +294,6 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
         {
             return 30
         }
-
     }
 }
 
@@ -328,5 +352,33 @@ extension DeliveryViewController {
         arrDesertProducts.append(Product.init(productName: "Dangee dums", productDiscount: 55, productRating: "4", productImage: UIImage(named: "desert4")!, productDeliveryTime: 27, productPrice: "175 for one"))
         arrDesertProducts.append(Product.init(productName: "City corner", productDiscount: 68, productRating: "4", productImage: UIImage(named: "desert5")!, productDeliveryTime: 35, productPrice: "200 for one"))
         
+        
+        // TopBrand
+        arrayTopBrand.append(TopBrand.init(brandName: "La Pino'z Pizza", brandImage: UIImage(named: "la pino'z")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "McDonald's", brandImage: UIImage(named: "mcd")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Jay Bhavani", brandImage: UIImage(named: "jaybhavani")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Subway", brandImage: UIImage(named: "subwy")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Sankalp", brandImage: UIImage(named: "sankalp")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Vipul Dudhiya", brandImage: UIImage(named: "vipul")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Kwality Wall's", brandImage: UIImage(named: "kwality")!))
+        arrayTopBrand.append(TopBrand.init(brandName: "Live Cake Bakery", brandImage: UIImage(named: "cake")!))
+        
+        arrayEatHappy.append(TopBrand.init(brandName: "Healthy", brandImage: UIImage(named: "la pino'z")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Pizza", brandImage: UIImage(named: "mcd")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Thali", brandImage: UIImage(named: "jaybhavani")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Chaat", brandImage: UIImage(named: "subwy")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Briyani", brandImage: UIImage(named: "sankalp")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Sandwich", brandImage: UIImage(named: "vipul")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Home Style", brandImage: UIImage(named: "kwality")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Burger", brandImage: UIImage(named: "cake")!))
+        
+        arrayEatHappy.append(TopBrand.init(brandName: "Chicken", brandImage: UIImage(named: "la pino'z")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Fries", brandImage: UIImage(named: "mcd")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Vada", brandImage: UIImage(named: "jaybhavani")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Pratha", brandImage: UIImage(named: "subwy")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Chhaach", brandImage: UIImage(named: "sankalp")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Dosa", brandImage: UIImage(named: "vipul")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Dal", brandImage: UIImage(named: "kwality")!))
+        arrayEatHappy.append(TopBrand.init(brandName: "Samosa", brandImage: UIImage(named: "cake")!))
     }
 }

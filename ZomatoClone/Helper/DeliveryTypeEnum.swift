@@ -27,6 +27,15 @@ enum DeliverySection: String, CaseIterable
     case restaurantsCell = "100+ restaurants around you"
 }
 
+enum DiningSection: String, CaseIterable
+{
+    case brandCell = ""
+    case curatedCell = "Curated collections"
+    case popularcell = "Popular resturants around you"
+    case popularagaincell = " "
+    case popularRepeatCell = "  "
+    case discoverResCell = "Discover resturants for"
+}
 
 
 enum filterRow: String, CaseIterable
