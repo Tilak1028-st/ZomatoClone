@@ -131,9 +131,10 @@ class DeliveryViewController: UIViewController {
         case .topBrandCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
             cell.imageWidth = 2
+            cell.isShowBorder = true
             cell.isShowSeeMoreButton = self.isShowSeeMoreButton
             cell.productArray = arrayTopBrand
-            //    cell.seeMoreButton.isHidden = true
+            cell.seeMoreButton.isHidden = true
             return cell
         case .quickCheckoutCell:
             let cell = productsTableView.dequeueReusableCell(withIdentifier: StringConstant.quickCheckoutTableCell, for: indexPath) as! QuickCheckoutTableViewCell
@@ -145,6 +146,8 @@ class DeliveryViewController: UIViewController {
             cell.seeMoreButton.addTarget(self, action: #selector(seeMorePressed(_:)), for: .touchUpInside)
             cell.isShowSeeMoreButton = isShowSeeMoreButton
             cell.imageWidth = 2
+            cell.isShowBorder = false
+            cell.seeMoreButton.isHidden = false
             cell.brandCollectionView.reloadData()
             return cell
         case .recommendedCell:
@@ -266,7 +269,7 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
         }
         else if DeliverySection.allCases[indexPath.section] == .topBrandCell
         {
-            return 330
+            return 295
         }
         else if DeliverySection.allCases[indexPath.section] == .eatHappyCell
         {

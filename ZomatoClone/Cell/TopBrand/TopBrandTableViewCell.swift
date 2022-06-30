@@ -24,6 +24,7 @@ class TopBrandTableViewCell: UITableViewCell {
     var productArray: [TopBrand]?
     var imageWidth: CGFloat?
     var isShowTime: Bool = false
+    var isShowBorder: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -69,6 +70,7 @@ extension TopBrandTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         let item = brandCollectionView.dequeueReusableCell(withReuseIdentifier: StringConstant.brandItemCollectionCell, for: indexPath) as! BrandItemCollectionViewCell
 
         item.imageWidth = self.imageWidth ?? 0.0
+        item.isShowBorder = self.isShowBorder
         if isShowTime
         {
             item.timmerView.isHidden = true

@@ -145,6 +145,10 @@ extension DiningViewController: UITableViewDelegate, UITableViewDataSource
                 return  295 + 5 + 30
             }
         }
+        else if DiningSection.allCases[indexPath.section] == .discoverResCell
+        {
+            return 295
+        }
         else
         {
             return 330
@@ -169,7 +173,7 @@ extension DiningViewController: UITableViewDelegate, UITableViewDataSource
 
 extension DiningViewController
 {
- //MARK: function to setup cellforrow for diningProductTableview.
+ //MARK: function to setup cellForRow for diningProductTableview.
     
     private func cellForRow(indexPath: IndexPath) -> UITableViewCell
     {
@@ -180,10 +184,12 @@ extension DiningViewController
         case .brandCell:
             let cell = diningProductTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
             cell.isShowTime = true
+            cell.isShowBorder = true
             cell.productArray = arrDiningProduct
             cell.imageWidth = 5
             cell.seeMoreButton.addTarget(self, action: #selector(seeMorePressed(_:)), for: .touchUpInside)
             cell.isShowSeeMoreButton = self.isShowSeeMoreButton
+            cell.seeMoreButton.isHidden = false
             cell.brandCollectionView.reloadData()
             return cell
         case .curatedCell, .popularcell, .popularagaincell, .popularRepeatCell:
@@ -199,10 +205,12 @@ extension DiningViewController
             return cell
         case .discoverResCell:
             let cell = diningProductTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
-            cell.productArray = arrayTopBrand
+            cell.isShowBorder = false
             cell.isShowSeeMoreButton = self.isShowSeeMoreButton
             cell.imageWidth = 5
             cell.isShowTime = true
+            cell.productArray = arrayTopBrand
+            cell.seeMoreButton.isHidden = true
             return cell
         }
     }

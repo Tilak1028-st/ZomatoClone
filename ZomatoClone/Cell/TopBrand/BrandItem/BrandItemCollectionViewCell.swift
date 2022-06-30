@@ -16,6 +16,7 @@ class BrandItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var brandImageView: UIImageView!
     
      var imageWidth: CGFloat?
+     var isShowBorder: Bool = false
     
     var brandArray: TopBrand?
     {
@@ -29,8 +30,17 @@ class BrandItemCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.brandImageView.layer.borderWidth = 0.5
-        self.brandImageView.layer.borderColor = UIColor.gray.cgColor
+        
+       
         DispatchQueue.main.async {
+            if self.isShowBorder
+            {
+                self.brandImageView.layer.borderColor = UIColor.gray.cgColor
+            }
+            else
+            {
+                self.brandImageView.layer.borderColor = UIColor.clear.cgColor
+            }
             self.brandImageView.layer.cornerRadius = self.brandImageView.frame.size.width/self.imageWidth!
         }
     }

@@ -25,6 +25,7 @@ class StringConstant
     static var crazyOfferCollectionViewCell = "CrazyOfferCollectionViewCell"
     static var mostLovedTableViewcell = "MostLovedTableViewCell"
     static var lovedCollectionViewCell = "LovedCollectionViewCell"
+    static var moneyTableViewcell = "MoneyTableViewCell"
     
     
     static var locationSearchVc = "LocationSearchViewController"

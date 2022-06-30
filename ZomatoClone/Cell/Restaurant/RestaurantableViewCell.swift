@@ -12,7 +12,8 @@ class RestaurantableViewCell: UITableViewCell {
     @IBOutlet weak var offerButton: UIButton!
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var ProImageView: UIImageView!
-    
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var starImageView: UIImageView!
     let array: [UIImage] = [UIImage(named: "food1")!,UIImage(named: "food2")!, UIImage(named: "food3")!]
     
     override func awakeFromNib() {
@@ -21,6 +22,12 @@ class RestaurantableViewCell: UITableViewCell {
             self.offerButton.clipsToBounds = true
             self.offerButton.layer.cornerRadius = 7
             self.offerButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+            self.starImageView.clipsToBounds = true
+            self.starImageView.layer.cornerRadius = 5
+            self.starImageView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+            self.ratingLabel.clipsToBounds = true
+            self.ratingLabel.layer.cornerRadius = 5
+            self.ratingLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
         }
         repeatAnimateImagesChanges(images: array as NSArray, imageView: self.ProImageView)
     }

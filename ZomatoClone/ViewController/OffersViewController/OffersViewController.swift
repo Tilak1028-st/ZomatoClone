@@ -15,15 +15,19 @@ class OffersViewController: UIViewController {
     @IBOutlet weak var leftBarButton: UIBarButtonItem!
     
     private var currentLocation: String = "Mumbai"
-    
+    var isShowSeeMoreButton: Bool = false
+    var arrDiningProduct = [TopBrand]()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSearchBar()
         setUpView()
+        setUpDetails()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         leftBarButton.title = currentLocation
     }
     
@@ -32,6 +36,7 @@ class OffersViewController: UIViewController {
         Utility.registerCell(tableView: offerTableView, cellName: StringConstant.bannerCell)
         Utility.registerCell(tableView: offerTableView, cellName: StringConstant.restaurantCell)
         Utility.registerCell(tableView: offerTableView, cellName: StringConstant.crazyTableViewCell)
+        Utility.registerCell(tableView: offerTableView, cellName: StringConstant.topBrandTableCell)
         Utility.registerCell(tableView: offerTableView, cellName: StringConstant.mostLovedTableViewcell)
         
         offerTableView.separatorColor = UIColor.clear
@@ -41,7 +46,6 @@ class OffersViewController: UIViewController {
         self.offerTableView.contentInset = UIEdgeInsets(top: -dummyViewHeight, left: 0, bottom: 0, right: 0)
         offerTableView.reloadData()
     }
-    
     
     private func setUpSearchBar()
     {
@@ -68,6 +72,7 @@ class OffersViewController: UIViewController {
         shareVc.navController = self.navigationController
         present(shareVc, animated: true, completion: nil)
     }
+    
     
     private func viewForHeader(section: Int) -> UIView
     {
@@ -116,17 +121,23 @@ extension OffersViewController: UITableViewDataSource, UITableViewDelegate
         case .mostLovedCell:
             let mostLovedCell = offerTableView.dequeueReusableCell(withIdentifier: StringConstant.mostLovedTableViewcell, for: indexPath) as! MostLovedTableViewCell
             return mostLovedCell
-        case .topDishCell, .bestOfferCell:
+        case .topDishCell:
+            let cell = offerTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell
+            cell.isShowTime = true
+            cell.productArray = arrDiningProduct
+            cell.imageWidth = 2
+            cell.isShowBorder = false
+            cell.seeMoreButton.isHidden = true
+            return cell
+        case .bestOfferCell:
             let cell = offerTableView.dequeueReusableCell(withIdentifier: StringConstant.restaurantCell, for: indexPath) as! RestaurantableViewCell
             cell.cellView.layer.borderWidth = 0.5
-            // cell.cellView.layer.masksToBounds = false
             cell.cellView.layer.borderColor = UIColor.gray.cgColor
             cell.cellView.layer.cornerRadius = 12
             cell.cellView.layer.shadowRadius = 5
             cell.cellView.layer.shadowColor = UIColor.gray.cgColor
             cell.cellView.layer.shadowOpacity = 0.7
             cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 5)
-            // cell.cellView.layer.cornerRadius = 12
             return cell
         }
     }
@@ -145,6 +156,10 @@ extension OffersViewController: UITableViewDataSource, UITableViewDelegate
         {
             return 200
         }
+        else if offerSection.allCases[indexPath.section] == .topDishCell
+        {
+            return 145
+        }
         else
         {
             return 300
@@ -156,12 +171,33 @@ extension OffersViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0  || section == 4 {
+        if section == 0  || section == 4
+        {
             return 5
+        }
+        else if section == 1
+        {
+            return 0
         }
         else
         {
             return 30
         }
+    }
+}
+
+
+extension OffersViewController
+{
+    func setUpDetails()
+    {
+        arrDiningProduct.append(TopBrand.init(brandName: "Pizza", brandImage: UIImage(named: "pizza")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Chaat", brandImage: UIImage(named: "chaat")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Burger", brandImage: UIImage(named: "burger1")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Sandwich", brandImage: UIImage(named: "sandwich")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Healthy", brandImage: UIImage(named: "healthy-1")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Pure Veg", brandImage: UIImage(named: "veg")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Kid Friendly", brandImage: UIImage(named: "kid")!))
+        arrDiningProduct.append(TopBrand.init(brandName: "Breakfast", brandImage: UIImage(named: "breakfast")!))
     }
 }

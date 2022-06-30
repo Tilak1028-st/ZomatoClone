@@ -13,7 +13,7 @@ class LovedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var offerTextLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        offerTextLabel.text = "deals \n for one"
+        offerTextLabel.text = "deals \nfor one"
         DispatchQueue.main.async {
             self.offerView.layer.cornerRadius = 8
         }

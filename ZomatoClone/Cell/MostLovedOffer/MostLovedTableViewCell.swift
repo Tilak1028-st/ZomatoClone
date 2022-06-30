@@ -35,11 +35,11 @@ extension MostLovedTableViewCell: UICollectionViewDelegate, UICollectionViewData
         let item = lovedCollectionView.dequeueReusableCell(withReuseIdentifier: StringConstant.lovedCollectionViewCell, for: indexPath) as! LovedCollectionViewCell
         if indexPath.item == 1
         {
-            item.offerTextLabel.text = "unlimited \n flat deals"
+            item.offerTextLabel.text = "unlimited \nflat deals"
         }
         else if indexPath.item == 2
         {
-            item.offerTextLabel.text = "fastest \n deliveries"
+            item.offerTextLabel.text = "fastest \ndeliveries"
         }
         return item
     }
