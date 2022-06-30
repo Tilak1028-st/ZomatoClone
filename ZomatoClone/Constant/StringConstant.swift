@@ -23,6 +23,8 @@ class StringConstant
     static var restaurantCell = "RestaurantableViewCell"
     static var crazyTableViewCell = "CrazyOfferableViewCell"
     static var crazyOfferCollectionViewCell = "CrazyOfferCollectionViewCell"
+    static var mostLovedTableViewcell = "MostLovedTableViewCell"
+    static var lovedCollectionViewCell = "LovedCollectionViewCell"
     
     
     static var locationSearchVc = "LocationSearchViewController"

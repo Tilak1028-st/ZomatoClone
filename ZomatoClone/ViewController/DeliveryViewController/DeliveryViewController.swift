@@ -200,7 +200,7 @@ class DeliveryViewController: UIViewController {
             cell.cellView.layer.shadowColor = UIColor.gray.cgColor
             cell.cellView.layer.shadowOpacity = 0.7
             cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 5)
-            cell.productImageView.layer.cornerRadius = 12
+       //     cell.productImageView.layer.cornerRadius = 12
             return cell
         }
     }
@@ -287,7 +287,8 @@ extension DeliveryViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
+        if section == 0
+        {
             return 0
         }
         else
@@ -337,7 +338,6 @@ extension DeliveryViewController {
         arrBurgerProducts.append(Product.init(productName: "McDonalds'", productDiscount: 65, productRating: "4", productImage: UIImage(named: "burger5")!, productDeliveryTime: 40, productPrice: "200 for one"))
         
         //sweets
-        
         arrSweetsProducts.append(Product.init(productName: "Puffizza", productDiscount: 60, productRating: "3", productImage: UIImage(named: "sweet1")!, productDeliveryTime: 30, productPrice: "125 for one"))
         arrSweetsProducts.append(Product.init(productName: "Cake Live", productDiscount: 70, productRating: "4", productImage: UIImage(named: "sweet2")!, productDeliveryTime: 45, productPrice: "100 for one"))
         arrSweetsProducts.append(Product.init(productName: "Honest", productDiscount: 45, productRating: "3", productImage: UIImage(named: "sweet3")!, productDeliveryTime: 28, productPrice: "150 for one"))
@@ -345,7 +345,6 @@ extension DeliveryViewController {
         arrSweetsProducts.append(Product.init(productName: "City corner", productDiscount: 78, productRating: "4", productImage: UIImage(named: "sweet5")!, productDeliveryTime: 45, productPrice: "200 for one"))
         
         //desert
-        
         arrDesertProducts.append(Product.init(productName: "Havmor Hav", productDiscount: 80, productRating: "3", productImage: UIImage(named: "desert1")!, productDeliveryTime: 32, productPrice: "125 for one"))
         arrDesertProducts.append(Product.init(productName: "Cake Live", productDiscount: 30, productRating: "4", productImage: UIImage(named: "desert2")!, productDeliveryTime: 40, productPrice: "100 for one"))
         arrDesertProducts.append(Product.init(productName: "Puffing", productDiscount: 45, productRating: "3", productImage: UIImage(named: "desert3")!, productDeliveryTime: 23, productPrice: "150 for one"))

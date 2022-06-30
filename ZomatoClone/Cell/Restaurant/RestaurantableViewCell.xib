@@ -29,13 +29,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zomato recycle more plastic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw7-x6-afc">
-                                <rect key="frame" x="0.0" y="268" width="443" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zomato recycle more plastic than used in orders" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw7-x6-afc">
+                                <rect key="frame" x="10" y="268" width="433" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="vXc-Hl-i8x"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 for one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSb-jX-QkC">
@@ -50,23 +50,76 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpM-Nd-uTw">
+                                <rect key="frame" x="0.0" y="0.0" width="443" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="WMW-aG-Dyt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="PURE VEG RESTURANT">
+                                    <color key="baseBackgroundColor" red="0.1407208694" green="0.54177916950000005" blue="0.24289081409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjk-S1-pl4">
+                                <rect key="frame" x="0.0" y="145.5" width="100" height="44"/>
+                                <color key="backgroundColor" red="0.24464306999999999" green="0.3442207591" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="U3Q-fa-lpl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="50% OFF Up to Rs100">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12.5"/>
+                                    <color key="baseForegroundColor" red="0.90825031430000003" green="1" blue="0.99889256920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TK-J5-FgI">
+                                <rect key="frame" x="303" y="164.5" width="130" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="L1f-da-tku"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="timer" catalog="system" title="30 mins | 5 km" imagePadding="3">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.90825031430000003" green="1" blue="0.99889256920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWD-dk-ckf">
+                                <rect key="frame" x="375.5" y="205.5" width="57.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="icons8-star-10" imagePlacement="trailing" title="4.1" imagePadding="5">
+                                    <color key="baseBackgroundColor" red="0.1407208694" green="0.54177916950000005" blue="0.24289081409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="olW-PA-sMP" firstAttribute="top" secondItem="Uop-fS-VsO" secondAttribute="top" id="049-QU-tiG"/>
                             <constraint firstItem="Fuu-en-ATE" firstAttribute="top" secondItem="klE-5q-AF0" secondAttribute="bottom" constant="7.5" id="1Rm-wo-yOS"/>
+                            <constraint firstAttribute="trailing" secondItem="8TK-J5-FgI" secondAttribute="trailing" constant="10" id="5hc-rL-rms"/>
                             <constraint firstAttribute="trailing" secondItem="olW-PA-sMP" secondAttribute="trailing" id="Ccb-Mz-c1K"/>
                             <constraint firstItem="Fuu-en-ATE" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" constant="10" id="Dlj-8N-U8s"/>
                             <constraint firstItem="klE-5q-AF0" firstAttribute="top" secondItem="olW-PA-sMP" secondAttribute="bottom" constant="10" id="G2B-bS-78s"/>
+                            <constraint firstItem="LpM-Nd-uTw" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" id="KXV-IP-FQa"/>
                             <constraint firstAttribute="trailing" secondItem="vw7-x6-afc" secondAttribute="trailing" id="Kky-Pk-jNl"/>
                             <constraint firstItem="vw7-x6-afc" firstAttribute="top" secondItem="Fuu-en-ATE" secondAttribute="bottom" constant="5" id="LNZ-bx-7KC"/>
+                            <constraint firstAttribute="trailing" secondItem="XWD-dk-ckf" secondAttribute="trailing" constant="10" id="Otx-7f-W3F"/>
+                            <constraint firstItem="klE-5q-AF0" firstAttribute="top" secondItem="kjk-S1-pl4" secondAttribute="bottom" constant="15" id="Q8r-Xu-mWf"/>
                             <constraint firstItem="klE-5q-AF0" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" constant="10" id="Qd5-4m-JwF"/>
                             <constraint firstItem="rSb-jX-QkC" firstAttribute="centerY" secondItem="Fuu-en-ATE" secondAttribute="centerY" id="S1k-1G-9m4"/>
                             <constraint firstAttribute="trailing" secondItem="rSb-jX-QkC" secondAttribute="trailing" constant="10" id="ZCd-02-Ze4"/>
                             <constraint firstItem="olW-PA-sMP" firstAttribute="height" secondItem="Uop-fS-VsO" secondAttribute="height" multiplier="0.65" id="bhO-3q-N3p"/>
                             <constraint firstAttribute="bottom" secondItem="vw7-x6-afc" secondAttribute="bottom" constant="10" id="cmv-9M-Cmv"/>
+                            <constraint firstItem="olW-PA-sMP" firstAttribute="top" secondItem="Uop-fS-VsO" secondAttribute="top" id="cnY-4a-GK3"/>
+                            <constraint firstItem="LpM-Nd-uTw" firstAttribute="top" secondItem="Uop-fS-VsO" secondAttribute="top" id="d69-88-zpX"/>
                             <constraint firstItem="olW-PA-sMP" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" id="gL0-RL-tio"/>
-                            <constraint firstItem="vw7-x6-afc" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" id="wsQ-0F-z6m"/>
+                            <constraint firstItem="8TK-J5-FgI" firstAttribute="bottom" secondItem="kjk-S1-pl4" secondAttribute="bottom" id="hQg-R5-UWU"/>
+                            <constraint firstItem="XWD-dk-ckf" firstAttribute="centerY" secondItem="klE-5q-AF0" secondAttribute="centerY" id="iCB-DM-Dba"/>
+                            <constraint firstItem="olW-PA-sMP" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" id="kIF-1v-0hr"/>
+                            <constraint firstAttribute="trailing" secondItem="olW-PA-sMP" secondAttribute="trailing" id="lYP-Xs-CeS"/>
+                            <constraint firstItem="kjk-S1-pl4" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" id="p6D-1H-Jrc"/>
+                            <constraint firstItem="vw7-x6-afc" firstAttribute="leading" secondItem="Uop-fS-VsO" secondAttribute="leading" constant="10" id="wsQ-0F-z6m"/>
+                            <constraint firstAttribute="trailing" secondItem="LpM-Nd-uTw" secondAttribute="trailing" id="zeO-q6-GvY"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -79,14 +132,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cellView" destination="Uop-fS-VsO" id="I97-pg-h1l"/>
-                <outlet property="productImageView" destination="Uop-fS-VsO" id="xjl-tw-Sp3"/>
+                <outlet property="ProImageView" destination="olW-PA-sMP" id="d31-KY-hBy"/>
+                <outlet property="cellView" destination="Uop-fS-VsO" id="45i-kz-7Ve"/>
+                <outlet property="offerButton" destination="kjk-S1-pl4" id="qhp-jn-x8u"/>
             </connections>
             <point key="canvasLocation" x="235.50724637681162" y="201.89732142857142"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="icons8-star-10" width="10" height="10"/>
         <image name="pizza" width="2000" height="1333"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -195,7 +195,7 @@ extension DiningViewController
             cell.cellView.layer.shadowColor = UIColor.gray.cgColor
             cell.cellView.layer.shadowOpacity = 0.7
             cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 5)
-            cell.productImageView.layer.cornerRadius = 12
+          //  cell.productImageView.layer.cornerRadius = 12
             return cell
         case .discoverResCell:
             let cell = diningProductTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell

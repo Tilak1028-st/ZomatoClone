@@ -16,6 +16,7 @@ class OffersViewController: UIViewController {
     
     private var currentLocation: String = "Mumbai"
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSearchBar()
@@ -31,6 +32,7 @@ class OffersViewController: UIViewController {
         Utility.registerCell(tableView: offerTableView, cellName: StringConstant.bannerCell)
         Utility.registerCell(tableView: offerTableView, cellName: StringConstant.restaurantCell)
         Utility.registerCell(tableView: offerTableView, cellName: StringConstant.crazyTableViewCell)
+        Utility.registerCell(tableView: offerTableView, cellName: StringConstant.mostLovedTableViewcell)
         
         offerTableView.separatorColor = UIColor.clear
         
@@ -66,6 +68,25 @@ class OffersViewController: UIViewController {
         shareVc.navController = self.navigationController
         present(shareVc, animated: true, completion: nil)
     }
+    
+    private func viewForHeader(section: Int) -> UIView
+    {
+        let headerView = UIView()
+        let label : UILabel = UILabel()
+        label.textColor = UIColor.black
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.backgroundColor = UIColor.white
+        headerView.backgroundColor = .white
+        headerView.addSubview(label)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 10).isActive = true
+        label.centerXAnchor.constraint(equalTo: headerView.centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
+        
+        label.text = offerSection.allCases[section].rawValue
+        return headerView
+    }
 }
 
 
@@ -92,8 +113,10 @@ extension OffersViewController: UITableViewDataSource, UITableViewDelegate
         case .crazyOfferCell:
             let bannerCell = offerTableView.dequeueReusableCell(withIdentifier: StringConstant.crazyTableViewCell, for: indexPath) as! CrazyOfferableViewCell
             return bannerCell
-            
-        case .topDishCell, .mostLovedCell, .bestOfferCell:
+        case .mostLovedCell:
+            let mostLovedCell = offerTableView.dequeueReusableCell(withIdentifier: StringConstant.mostLovedTableViewcell, for: indexPath) as! MostLovedTableViewCell
+            return mostLovedCell
+        case .topDishCell, .bestOfferCell:
             let cell = offerTableView.dequeueReusableCell(withIdentifier: StringConstant.restaurantCell, for: indexPath) as! RestaurantableViewCell
             cell.cellView.layer.borderWidth = 0.5
             // cell.cellView.layer.masksToBounds = false
@@ -103,7 +126,7 @@ extension OffersViewController: UITableViewDataSource, UITableViewDelegate
             cell.cellView.layer.shadowColor = UIColor.gray.cgColor
             cell.cellView.layer.shadowOpacity = 0.7
             cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 5)
-            cell.productImageView.layer.cornerRadius = 12
+            // cell.cellView.layer.cornerRadius = 12
             return cell
         }
     }
@@ -112,12 +135,33 @@ extension OffersViewController: UITableViewDataSource, UITableViewDelegate
         
         if offerSection.allCases[indexPath.section] == .offerCell
         {
-           return 250
+            return 250
+        }
+        else if offerSection.allCases[indexPath.section] == .mostLovedCell
+        {
+            return 100
+        }
+        else if offerSection.allCases[indexPath.section] == .crazyOfferCell
+        {
+            return 200
         }
         else
         {
             return 300
         }
-        
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return viewForHeader(section: section)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0  || section == 4 {
+            return 5
+        }
+        else
+        {
+            return 30
+        }
     }
 }
