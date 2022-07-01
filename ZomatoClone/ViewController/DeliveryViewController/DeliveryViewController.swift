@@ -18,7 +18,7 @@ class DeliveryViewController: UIViewController {
     
     
     var isShowSeeMoreButton: Bool = false
-    var currentLocation: String = "Mumbai"
+    var currentLocation: String = "Ahmedabad"
     
     var arrFeturesProducts = [Product]()
     var arrRecommendedProducts = [Product]()
@@ -44,7 +44,11 @@ class DeliveryViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        leftBarButton.title = currentLocation
+        let navTitle = UIBarButtonItem(title: currentLocation, style: UIBarButtonItem.Style.done, action: openMap)
+        let navImage = UIBarButtonItem(image: UIImage(systemName: "mappin"), style: UIBarButtonItem.Style.done, action: openMap)
+        navImage.tintColor = UIColor.red
+        navTitle.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItems = [navImage, navTitle]
     }
     
     
@@ -69,6 +73,23 @@ class DeliveryViewController: UIViewController {
         productsTableView.reloadData()
     }
     
+    func barItem() {
+        let button = UIButton.init(type: .custom)
+        button.addTarget(self, action: #selector(openMap(_:)), for: .touchUpInside)
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        imageView.image = UIImage(systemName: "mappin")
+        imageView.tintColor = UIColor.red
+        let label = UILabel(frame: CGRect(x: 35, y: 0, width: 150, height: 30))
+        label.text = currentLocation
+        let buttonView = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 30))
+        button.frame = buttonView.frame
+        buttonView.addSubview(button)
+        buttonView.addSubview(imageView)
+        buttonView.addSubview(label)
+        let barButton = UIBarButtonItem.init(customView: buttonView)
+        self.navigationItem.leftBarButtonItem = barButton
+    }
+    
     // MARK: SetUpSearchBar
     private func setUpSearchBar()
     {
@@ -83,18 +104,6 @@ class DeliveryViewController: UIViewController {
             attributes: [.foregroundColor: UIColor.red]
         )
     }
-    
-    @IBAction func openMap(_ sender: UIBarButtonItem)
-    {
-        let shareVc = storyboard?.instantiateViewController(withIdentifier: StringConstant.locationSearchVc) as! LocationSearchViewController
-        
-        if let sheet = shareVc.sheetPresentationController {
-            sheet.detents = [ .medium(), .large()]
-        }
-        shareVc.navController = self.navigationController
-        present(shareVc, animated: true, completion: nil)
-    }
-    
     
     //MARK:  - Product tableView Section header
     
@@ -203,7 +212,7 @@ class DeliveryViewController: UIViewController {
             cell.cellView.layer.shadowColor = UIColor.gray.cgColor
             cell.cellView.layer.shadowOpacity = 0.7
             cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 5)
-       //     cell.productImageView.layer.cornerRadius = 12
+            //     cell.productImageView.layer.cornerRadius = 12
             return cell
         }
     }

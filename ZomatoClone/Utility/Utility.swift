@@ -20,3 +20,4 @@ class Utility
         collectionView.register(UINib(nibName: cellName, bundle: nil), forCellWithReuseIdentifier: cellName)
     }
 }
+

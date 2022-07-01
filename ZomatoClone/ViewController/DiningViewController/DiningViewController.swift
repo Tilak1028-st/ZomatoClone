@@ -8,7 +8,7 @@
 import UIKit
 
 class DiningViewController: UIViewController {
-
+    
     @IBOutlet weak var diningProductTableView: UITableView!
     @IBOutlet weak var diningFilterCollectionView: UICollectionView!
     @IBOutlet weak var rightBarButton: UIBarButtonItem!
@@ -29,7 +29,12 @@ class DiningViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        leftBarButton.title = currentLocation
+        let navTitle = UIBarButtonItem(title: currentLocation, style: UIBarButtonItem.Style.done, action: openMap)
+        let navImage = UIBarButtonItem(image: UIImage(systemName: "mappin"), style: UIBarButtonItem.Style.done, action: openMap)
+        navImage.tintColor = UIColor.red
+        navTitle.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItems = [navImage,navTitle]
+        
     }
     
     //MARK: setupView
@@ -39,7 +44,7 @@ class DiningViewController: UIViewController {
         Utility.registerCell(tableView: diningProductTableView, cellName: StringConstant.topBrandTableCell)
         Utility.registerCell(tableView: diningProductTableView, cellName: StringConstant.restaurantCell)
         
-       
+        
         diningProductTableView.separatorColor = UIColor.clear
         
         let dummyViewHeight = CGFloat(40)
@@ -48,7 +53,7 @@ class DiningViewController: UIViewController {
         diningProductTableView.reloadData()
     }
     
- //MARK: SetUpSearchvBar for Dining tab/
+    //MARK: SetUpSearchvBar for Dining tab/
     private func setUpSearchBar()
     {
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
@@ -66,18 +71,6 @@ class DiningViewController: UIViewController {
     @IBAction func seeMorePressed(_ sender: UIButton) {
         isShowSeeMoreButton = !isShowSeeMoreButton
         self.diningProductTableView.reloadData()
-    }
-    
-//MARK: Function will openMap Sheet
-    @IBAction func openMap(_ sender: UIBarButtonItem)
-    {
-        let shareVc = storyboard?.instantiateViewController(withIdentifier: StringConstant.locationSearchVc) as! LocationSearchViewController
-        
-        if let sheet = shareVc.sheetPresentationController {
-            sheet.detents = [ .medium(), .large()]
-        }
-        shareVc.navController = self.navigationController
-        present(shareVc, animated: true, completion: nil)
     }
 }
 
@@ -173,7 +166,7 @@ extension DiningViewController: UITableViewDelegate, UITableViewDataSource
 
 extension DiningViewController
 {
- //MARK: function to setup cellForRow for diningProductTableview.
+    //MARK: function to setup cellForRow for diningProductTableview.
     
     private func cellForRow(indexPath: IndexPath) -> UITableViewCell
     {
@@ -201,7 +194,7 @@ extension DiningViewController
             cell.cellView.layer.shadowColor = UIColor.gray.cgColor
             cell.cellView.layer.shadowOpacity = 0.7
             cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 5)
-          //  cell.productImageView.layer.cornerRadius = 12
+            //  cell.productImageView.layer.cornerRadius = 12
             return cell
         case .discoverResCell:
             let cell = diningProductTableView.dequeueReusableCell(withIdentifier: StringConstant.topBrandTableCell, for: indexPath) as! TopBrandTableViewCell

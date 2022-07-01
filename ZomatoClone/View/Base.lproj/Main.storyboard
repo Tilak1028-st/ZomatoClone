@@ -250,27 +250,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YRV-MY-Elp">
-                        <leftBarButtonItems>
-                            <barButtonItem image="pin" catalog="system" id="NW0-FI-o58">
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                                <connections>
-                                    <action selector="openMap:" destination="upc-14-Tfx" id="cgG-X8-Gab"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="New york " id="4jV-wg-vKc">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="openMap:" destination="upc-14-Tfx" id="Dfu-oJ-ecx"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" image="icons8-wine-glass-50" id="OVK-Je-0MJ">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="filterCollectionView" destination="bLv-Dh-QmN" id="nFI-cn-R5g"/>
-                        <outlet property="leftBarButton" destination="4jV-wg-vKc" id="mqh-SC-9Xa"/>
                         <outlet property="productsTableView" destination="3EB-UN-Unk" id="StB-lS-JRC"/>
                         <outlet property="rightBarButton" destination="OVK-Je-0MJ" id="oo4-53-f0W"/>
                         <outlet property="searchBar" destination="Xjy-u7-egg" id="ztn-gZ-oOv"/>
@@ -336,14 +321,6 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="UiM-XU-THZ">
-                        <leftBarButtonItems>
-                            <barButtonItem image="pin" catalog="system" id="8ez-gm-uPn">
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                            </barButtonItem>
-                            <barButtonItem title="New york" id="g1n-6u-SBS">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" image="icons8-wine-glass-50" id="fas-lc-4hT">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
@@ -352,7 +329,6 @@
                     <connections>
                         <outlet property="diningFilterCollectionView" destination="HJ0-KX-IFh" id="yKL-9w-tJg"/>
                         <outlet property="diningProductTableView" destination="awW-kC-UcC" id="3PX-MQ-u7t"/>
-                        <outlet property="leftBarButton" destination="g1n-6u-SBS" id="4sF-0c-Trl"/>
                         <outlet property="rightBarButton" destination="fas-lc-4hT" id="5Iy-wR-zcB"/>
                         <outlet property="searchBar" destination="aZe-kZ-G6p" id="evu-Hy-1LC"/>
                     </connections>
@@ -396,26 +372,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PNz-7C-ozm">
-                        <leftBarButtonItems>
-                            <barButtonItem image="pin" catalog="system" id="H9m-bh-q50">
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                                <connections>
-                                    <action selector="openMap:" destination="w51-iW-GKi" id="R7o-pv-vHg"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Mumbai" id="Ieq-0g-x8z">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="openMap:" destination="w51-iW-GKi" id="GaC-D6-aPx"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" image="icons8-wine-glass-50" id="KPf-Ux-BQs">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="leftBarButton" destination="Ieq-0g-x8z" id="wYl-qG-Odd"/>
                         <outlet property="offerSearchBar" destination="s2F-LB-JWB" id="EhB-sE-fYz"/>
                         <outlet property="offerTableView" destination="dsM-y5-OWF" id="N2q-1r-cE7"/>
                     </connections>
@@ -637,7 +598,6 @@
         <image name="lifepreserver" catalog="system" width="128" height="121"/>
         <image name="location" catalog="system" width="128" height="118"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
-        <image name="pin" catalog="system" width="119" height="128"/>
         <image name="scooter" catalog="system" width="128" height="95"/>
         <image name="wallet" width="225" height="225"/>
         <image name="wallet.pass" catalog="system" width="115" height="128"/>

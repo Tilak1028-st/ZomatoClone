@@ -8,7 +8,7 @@
 import UIKit
 
 class MoneyViewController: UIViewController {
-
+    
     @IBOutlet weak var moneyTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()

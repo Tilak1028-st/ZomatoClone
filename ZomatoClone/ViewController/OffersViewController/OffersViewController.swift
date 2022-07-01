@@ -17,7 +17,7 @@ class OffersViewController: UIViewController {
     private var currentLocation: String = "Mumbai"
     var isShowSeeMoreButton: Bool = false
     var arrDiningProduct = [TopBrand]()
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,11 @@ class OffersViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool)
     {
-        leftBarButton.title = currentLocation
+        let navTitle = UIBarButtonItem(title: currentLocation, style: UIBarButtonItem.Style.done, action: self.openMap)
+        let navImage = UIBarButtonItem(image: UIImage(systemName: "mappin"), style: UIBarButtonItem.Style.done, action: self.openMap)
+        navImage.tintColor = UIColor.red
+        navTitle.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItems = [navImage, navTitle]
     }
     
     private func setUpView()
@@ -59,18 +63,6 @@ class OffersViewController: UIViewController {
             string: "Search Resturants",
             attributes: [.foregroundColor: UIColor.red]
         )
-    }
-    
-    
-    @IBAction func openMap(_ sender: UIBarButtonItem)
-    {
-        let shareVc = storyboard?.instantiateViewController(withIdentifier: StringConstant.locationSearchVc) as! LocationSearchViewController
-        
-        if let sheet = shareVc.sheetPresentationController {
-            sheet.detents = [ .medium(), .large()]
-        }
-        shareVc.navController = self.navigationController
-        present(shareVc, animated: true, completion: nil)
     }
     
     

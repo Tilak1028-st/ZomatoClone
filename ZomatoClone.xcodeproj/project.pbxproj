@@ -28,6 +28,8 @@
 		82983C0C2865D13800AD71C7 /* RestaurantableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82983C0A2865D13800AD71C7 /* RestaurantableViewCell.swift */; };
 		82983C0D2865D13800AD71C7 /* RestaurantableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82983C0B2865D13800AD71C7 /* RestaurantableViewCell.xib */; };
 		82983C102865DE0D00AD71C7 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82983C0F2865DE0D00AD71C7 /* Utility.swift */; };
+		82B8450D286ED5BB00A2BE0F /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B8450C286ED5BB00A2BE0F /* ViewControllerExtension.swift */; };
+		82B8450F286ED63600A2BE0F /* UIBarButtonItemextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B8450E286ED63600A2BE0F /* UIBarButtonItemextension.swift */; };
 		82C07FFE286C3B5B00E4A202 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C07FFD286C3B5B00E4A202 /* ProductModel.swift */; };
 		82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AC628644ADF005E101B /* AppDelegate.swift */; };
 		82D66AC928644ADF005E101B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D66AC828644ADF005E101B /* SceneDelegate.swift */; };
@@ -79,6 +81,8 @@
 		82983C0A2865D13800AD71C7 /* RestaurantableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantableViewCell.swift; sourceTree = "<group>"; };
 		82983C0B2865D13800AD71C7 /* RestaurantableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantableViewCell.xib; sourceTree = "<group>"; };
 		82983C0F2865DE0D00AD71C7 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		82B8450C286ED5BB00A2BE0F /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		82B8450E286ED63600A2BE0F /* UIBarButtonItemextension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemextension.swift; sourceTree = "<group>"; };
 		82C07FFD286C3B5B00E4A202 /* ProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		82D66AC328644ADF005E101B /* ZomatoClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZomatoClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D66AC628644ADF005E101B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +232,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		82B8450B286ED5A000A2BE0F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				82B8450C286ED5BB00A2BE0F /* ViewControllerExtension.swift */,
+				82B8450E286ED63600A2BE0F /* UIBarButtonItemextension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		82D66ABA28644ADF005E101B = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				82D66ADA28644E2B005E101B /* Delegate */,
+				82B8450B286ED5A000A2BE0F /* Extension */,
 				82983C0E2865DDF700AD71C7 /* Utility */,
 				82D66ADE28644E79005E101B /* Constant */,
 				82D66AF228647D0E005E101B /* Helper */,
@@ -544,6 +558,7 @@
 				828AE6FE2869D62F001FF567 /* LocationSearchViewController.swift in Sources */,
 				82D66B0728648EF1005E101B /* TopBrandTableViewCell.swift in Sources */,
 				82D66AC728644ADF005E101B /* AppDelegate.swift in Sources */,
+				82B8450D286ED5BB00A2BE0F /* ViewControllerExtension.swift in Sources */,
 				82983C002865C86300AD71C7 /* SmallProductTableViewCell.swift in Sources */,
 				828AE7012869D8AF001FF567 /* MapViewController.swift in Sources */,
 				82983BF028656DEB00AD71C7 /* ProductCollectionViewCell.swift in Sources */,
@@ -556,6 +571,7 @@
 				8246281C286D741300E6712D /* MostLovedTableViewCell.swift in Sources */,
 				82D66AFE28648419005E101B /* ProductTableViewCell.swift in Sources */,
 				82983BF52865775A00AD71C7 /* BrandItemCollectionViewCell.swift in Sources */,
+				82B8450F286ED63600A2BE0F /* UIBarButtonItemextension.swift in Sources */,
 				82983C102865DE0D00AD71C7 /* Utility.swift in Sources */,
 				82D66AE82864506E005E101B /* OffersViewController.swift in Sources */,
 				82C07FFE286C3B5B00E4A202 /* ProductModel.swift in Sources */,
