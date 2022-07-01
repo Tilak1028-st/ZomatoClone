@@ -237,16 +237,16 @@
                         <viewLayoutGuide key="safeArea" id="bvJ-Os-xAS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xjy-u7-egg" firstAttribute="trailing" secondItem="bvJ-Os-xAS" secondAttribute="trailing" id="4td-oV-Cnv"/>
+                            <constraint firstItem="Xjy-u7-egg" firstAttribute="trailing" secondItem="TC1-ZY-fqV" secondAttribute="trailing" id="4td-oV-Cnv"/>
                             <constraint firstItem="3EB-UN-Unk" firstAttribute="trailing" secondItem="TC1-ZY-fqV" secondAttribute="trailing" id="B4u-V6-cVP"/>
                             <constraint firstItem="3EB-UN-Unk" firstAttribute="leading" secondItem="TC1-ZY-fqV" secondAttribute="leading" id="Dqp-zJ-Jl3"/>
-                            <constraint firstItem="Xjy-u7-egg" firstAttribute="leading" secondItem="bvJ-Os-xAS" secondAttribute="leading" id="Knk-1S-ZAR"/>
-                            <constraint firstItem="bLv-Dh-QmN" firstAttribute="leading" secondItem="bvJ-Os-xAS" secondAttribute="leading" id="Ldw-tt-Hxa"/>
+                            <constraint firstItem="Xjy-u7-egg" firstAttribute="leading" secondItem="TC1-ZY-fqV" secondAttribute="leading" id="Knk-1S-ZAR"/>
+                            <constraint firstItem="bLv-Dh-QmN" firstAttribute="leading" secondItem="TC1-ZY-fqV" secondAttribute="leading" id="Ldw-tt-Hxa"/>
                             <constraint firstItem="3EB-UN-Unk" firstAttribute="bottom" secondItem="bvJ-Os-xAS" secondAttribute="bottom" id="Zjm-E1-PYE"/>
                             <constraint firstItem="bLv-Dh-QmN" firstAttribute="top" secondItem="Xjy-u7-egg" secondAttribute="bottom" id="cvl-xm-BTl"/>
                             <constraint firstItem="3EB-UN-Unk" firstAttribute="top" secondItem="bLv-Dh-QmN" secondAttribute="bottom" id="oEc-rL-yyo"/>
                             <constraint firstItem="Xjy-u7-egg" firstAttribute="top" secondItem="bvJ-Os-xAS" secondAttribute="top" id="oif-Y8-8Lf"/>
-                            <constraint firstItem="bvJ-Os-xAS" firstAttribute="trailing" secondItem="bLv-Dh-QmN" secondAttribute="trailing" id="zRg-r8-FbA"/>
+                            <constraint firstAttribute="trailing" secondItem="bLv-Dh-QmN" secondAttribute="trailing" id="zRg-r8-FbA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YRV-MY-Elp">
@@ -495,7 +495,7 @@
         <!--Delivery-->
         <scene sceneID="UC7-dc-6sM">
             <objects>
-                <navigationController id="jhy-7H-MEf" sceneMemberID="viewController">
+                <navigationController hidesBarsOnSwipe="YES" id="jhy-7H-MEf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Delivery" image="scooter" catalog="system" selectedImage="scooter" id="4a1-m6-zAn">
                         <color key="badgeColor" systemColor="systemPinkColor"/>
                     </tabBarItem>

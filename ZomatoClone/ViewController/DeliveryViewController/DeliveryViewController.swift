@@ -36,6 +36,7 @@ class DeliveryViewController: UIViewController {
         setUpview()
         setUpProductDetails()
         setUpSearchBar()
+        productsTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: true)
     }
     
     @IBAction func seeMorePressed(_ sender: UIButton) {
@@ -73,22 +74,22 @@ class DeliveryViewController: UIViewController {
         productsTableView.reloadData()
     }
     
-    func barItem() {
-        let button = UIButton.init(type: .custom)
-        button.addTarget(self, action: #selector(openMap(_:)), for: .touchUpInside)
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        imageView.image = UIImage(systemName: "mappin")
-        imageView.tintColor = UIColor.red
-        let label = UILabel(frame: CGRect(x: 35, y: 0, width: 150, height: 30))
-        label.text = currentLocation
-        let buttonView = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 30))
-        button.frame = buttonView.frame
-        buttonView.addSubview(button)
-        buttonView.addSubview(imageView)
-        buttonView.addSubview(label)
-        let barButton = UIBarButtonItem.init(customView: buttonView)
-        self.navigationItem.leftBarButtonItem = barButton
-    }
+//    func barItem() {
+//        let button = UIButton.init(type: .custom)
+//        button.addTarget(self, action: #selector(openMap(_:)), for: .touchUpInside)
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+//        imageView.image = UIImage(systemName: "mappin")
+//        imageView.tintColor = UIColor.red
+//        let label = UILabel(frame: CGRect(x: 35, y: 0, width: 150, height: 30))
+//        label.text = currentLocation
+//        let buttonView = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 30))
+//        button.frame = buttonView.frame
+//        buttonView.addSubview(button)
+//        buttonView.addSubview(imageView)
+//        buttonView.addSubview(label)
+//        let barButton = UIBarButtonItem.init(customView: buttonView)
+//        self.navigationItem.leftBarButtonItem = barButton
+//    }
     
     // MARK: SetUpSearchBar
     private func setUpSearchBar()
