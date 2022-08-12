@@ -27,5 +27,13 @@
     <td><img src="https://user-images.githubusercontent.com/75114840/184348206-a180ab5b-0483-44be-bc32-05f49e4245c9.png" width=250 height=480></td>
   </tr>
  </table>
+ 
+ * Payment Screen
+  <table>
+  <tr>
+    <td><img src="![image](https://user-images.githubusercontent.com/75114840/184348629-35300ed6-c4a0-457e-9cf7-e77684fb7d54.png)" width=250 height=480></td>
+  </tr>
+ </table>
+ 
 
 
