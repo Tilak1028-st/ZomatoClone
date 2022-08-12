@@ -20,5 +20,12 @@
   </tr>
  </table>
 
+ * Other Screen
+ * <table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/75114840/184348086-9bd0cf5a-5536-422e-9b69-aa8acf07bb86.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/75114840/184348206-a180ab5b-0483-44be-bc32-05f49e4245c9.png" width=270 height=480></td>
+  </tr>
+ </table>
 
 
