@@ -10,6 +10,15 @@
     <td><img src="https://user-images.githubusercontent.com/75114840/184346845-0fb6bf86-e09e-4de6-b835-6254d494372d.png" width=270 height=480></td>
   </tr>
  </table>
+ 
+  * Dining Screen
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/75114840/184347287-f613c718-a86b-4572-80a5-78ac33e26220.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/75114840/184347648-3e1434f1-49bc-465a-a24e-53c2b2b83032.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/75114840/184347745-3b5dd78b-72c7-45ec-9062-e904f7ee03e2.png" width=270 height=480></td>
+  </tr>
+ </table>
 
 
 
