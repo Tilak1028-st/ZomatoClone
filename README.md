@@ -5,8 +5,6 @@
 <table>
   <tr>
     <td>First Screen Page</td>
-     <td>Holiday Mention</td>
-     <td>Present day in purple and selected day in pink</td>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/75114840/184346416-e2b420c5-375e-4bac-a7b3-e09296fee460.png" width=270 height=480></td>
